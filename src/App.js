@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
 import Product from "./pages/Product";
 import Notfound from "./pages/404";
+import Adar from "./pages/Adar";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Route, Routes } from "react-router-dom";
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Notfound />} />
+          <Route path="/adar" element={<Adar />} />
         </Routes>
       </main>
 

@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 const ProductDetails = () => {
   const { state: product } = useLocation();
 
-  const { img, title, description, category, brand, rating, price } = product;
+  const {img, title, description, category, brand, rating, price } = product;
   return (
     <section className="flex flex-col gap-16 py-10 bg-gray-100">
       <div className="container mx-auto flex justify-around  items-center w-[80%]">
