@@ -5,7 +5,7 @@ on:
     types: [created]
   push:
     branches:
-      - develos
+      - develop
 
 jobs:
   build:
