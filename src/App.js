@@ -29,11 +29,8 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Notfound />} />
-<<<<<<< HEAD
           <Route path="/stav" element={<StavPage />} />
-=======
           <Route path="/adar" element={<Adar />} />
->>>>>>> Feature-adar
         </Routes>
       </main>
 

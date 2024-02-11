@@ -31,11 +31,8 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-<<<<<<< HEAD
             <NavLink to="/stav">Stav's feature</NavLink>
-=======
           <NavLink to="/adar">Adar</NavLink>
->>>>>>> Feature-adar
           </li>
         </ul>
       </nav>
