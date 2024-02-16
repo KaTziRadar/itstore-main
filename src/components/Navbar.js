@@ -26,14 +26,20 @@ const Navbar = () => {
             <NavLink to="/contact">Contact</NavLink>
           </li>
           <li>
+            <NavLink to="/stav">Stav's feature</NavLink>
+          </li>
+          <li>
+            <NavLink to="/adar">Adar</NavLink>
+          </li>
+          <li>
+            <NavLink to="/Ido">Ido</NavLink>
+          </li>
+          <li>
             <NavLink to="/cart">
               <FaShoppingCart />
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/stav">Stav's feature</NavLink>
-          <NavLink to="/adar">Adar</NavLink>
-          </li>
+
         </ul>
       </nav>
     </div>
@@ -41,3 +47,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
