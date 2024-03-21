@@ -3,7 +3,9 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
 import Notfound from "./pages/404";
-import StavPage from "./pages/Stav";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Stav from "./pages/Stav";
 import Adar from "./pages/Adar";
 import Ido from "./pages/Ido";
 import Navbar from "./components/Navbar";
@@ -26,7 +28,9 @@ const App = () => {
           <Route path="/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Notfound />} />
-          <Route path="/stav" element={<StavPage />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/stav" element={<Stav />} />
           <Route path="/adar" element={<Adar />} />
           <Route path="/Ido" element={<Ido />} />
         </Routes>
