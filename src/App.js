@@ -1,8 +1,6 @@
 import React from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Booking from "./pages/Booking";
 import Product from "./pages/Product";
 import Notfound from "./pages/404";
 import StavPage from "./pages/Stav";
@@ -26,8 +24,6 @@ const App = () => {
           <Route path="/product" element={<Product />} />
           <Route path="product/:id" element={<ProductDetails />} />
           <Route path="/:id" element={<ProductDetails />} />
-          <Route path="/booking" element={<Booking />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="*" element={<Notfound />} />
           <Route path="/stav" element={<StavPage />} />

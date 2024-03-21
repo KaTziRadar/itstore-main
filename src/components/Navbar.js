@@ -20,13 +20,7 @@ const Navbar = () => {
             <NavLink to="/product">Product</NavLink>
           </li>
           <li>
-            <NavLink to="/booking">Booking</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact">Contact</NavLink>
-          </li>
-          <li>
-            <NavLink to="/stav">Stav's feature</NavLink>
+            <NavLink to="/stav">Stav</NavLink>
           </li>
           <li>
             <NavLink to="/adar">Adar</NavLink>

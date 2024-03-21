@@ -37,7 +37,7 @@ const SingleProduct = ({ product }) => {
           </button>
         </Link>
         <button
-          onClick={() => console.log("ksk")}
+          onClick={() => console.log("adding to cart")}
           className="bg-sky-400 text-sky-50 hover:bg-sky-50 hover:text-sky-400 duration-300 border border-sky-400 px-2 py-1 rounded-md"
         >
           add to cart
