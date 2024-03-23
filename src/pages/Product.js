@@ -2,7 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import SingleProduct from "../components/SingleProduct";
 import { Link } from "react-router-dom";
 
-const Products = () => {
+const Products = (cart,setCart) => {
+
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -11,7 +12,7 @@ const Products = () => {
   const [catPath, setCatPath] = useState("all categories");
 
   const para = useRef(null);
-
+  
   const categories = [
     "smartphone",
     "laptop",
@@ -37,7 +38,7 @@ const Products = () => {
       }
     };
     getData();
-  }, []);
+  },[]);
 
   if (isLoading)
     return (
@@ -56,6 +57,7 @@ const Products = () => {
     );
 
   return (
+    
     <div className="container mx-auto pb-20">
       <h2 className="text-center text-3xl py-10">All Products</h2>
       <div className="flex justify-between gap-10">
@@ -95,7 +97,7 @@ const Products = () => {
           <div className="grid grid-cols-3 gap-10 ">
             {filterProducts &&
               filterProducts.map((product) => (
-                <SingleProduct key={product.id} product={product} />
+                <SingleProduct key={product.id} product={product} cart={cart} setCart={setCart}/>
               ))}
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
-const Navbar = () => {
+const Navbar = ({size}) => {
   return (
     <div className="shadow-lg backdrop-blur-lg py-5 text-gray-900 bg-gray-50">
       <nav className="flex items-center container mx-auto">
@@ -31,6 +31,7 @@ const Navbar = () => {
           <li>
             <NavLink to="/cart">
               <FaShoppingCart />
+              <span>{size}</span>
             </NavLink>
           </li>
 
