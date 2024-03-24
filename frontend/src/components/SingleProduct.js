@@ -1,7 +1,23 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const SingleProduct = ({ product }) => {
+const SingleProduct = ({ product,cart}) => {
   const { img, title, brand, price } = product;
+
+  const addToCart = (id,img, title, brand, price) =>
+  {
+    const obj = {
+      id,img, title, brand, price,quantity:1
+    }
+    const index = cart.cart.findIndex(product => product.id === obj.id);
+    if(index !== -1) {
+      cart.cart[index].quantity++;
+    } else {
+      cart.setCart([...cart.cart,obj]);
+      console.log("Cart element",cart.cart)
+    }
+    
+  }
   return (
     <div className="single-product flex flex-col bg-gray-50 gap-3 shadow-md hover:shadow-xl hover:scale-105 duration-300 px-4 py-7 rounded-sm overflow-hidden">
       <div className="flex justify-center">
@@ -37,7 +53,7 @@ const SingleProduct = ({ product }) => {
           </button>
         </Link>
         <button
-          onClick={() => console.log("adding to cart")}
+          onClick={() => addToCart(product.id,product.img , product.title,product.brand,product.price)}
           className="bg-sky-400 text-sky-50 hover:bg-sky-50 hover:text-sky-400 duration-300 border border-sky-400 px-2 py-1 rounded-md"
         >
           add to cart

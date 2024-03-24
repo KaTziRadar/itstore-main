@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
@@ -15,18 +15,19 @@ import ProductDetails from "./components/ProductDetails";
 import Cart from "./pages/Cart";
 
 const App = () => {
+  const [cart,setCart] = useState([]);
   return (
     <section className="">
-      <Navbar />
+      <Navbar size={cart.length}/>
 
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/product" element={<Product cart={cart} setCart={setCart} />} />
           <Route path="product/:id" element={<ProductDetails />} />
           <Route path="/:id" element={<ProductDetails />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
           <Route path="*" element={<Notfound />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />

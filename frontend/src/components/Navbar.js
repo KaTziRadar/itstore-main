@@ -1,21 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
-
 const Navbar = () => {
-  const navigate = useNavigate();
-
-  const logout = () => {
-    window.localStorage.clear();
-    navigate('/');
-  };
-
-  const isLoggedIn = () => {
-    if (localStorage.getItem("userID"))
-      return true;
-    return false;
-  }
-
   return (
     <div className="shadow-lg backdrop-blur-lg py-5 text-gray-900 bg-gray-50">
       <nav className="flex items-center container mx-auto">
@@ -34,16 +19,6 @@ const Navbar = () => {
           <li>
             <NavLink to="/product">Product</NavLink>
           </li>
-          {!isLoggedIn() &&
-            <>
-              <li>
-                <NavLink to="/login">Login</NavLink>
-              </li>
-              <li>
-                <NavLink to="/register">Register</NavLink>
-              </li>
-            </>
-          }
           <li>
             <NavLink to="/stav">Stav</NavLink>
           </li>
@@ -53,18 +28,11 @@ const Navbar = () => {
           <li>
             <NavLink to="/Ido">Ido</NavLink>
           </li>
-          {isLoggedIn() &&
-            <>
-              <li>
-                <NavLink to="/login" onClick={logout}>Logout</NavLink>
-              </li>
-              <li>
-                <NavLink to="/cart">
-                  <FaShoppingCart />
-                </NavLink>
-              </li>
-            </>
-          }
+          <li>
+            <NavLink to="/cart">
+              <FaShoppingCart />
+            </NavLink>
+          </li>
 
         </ul>
       </nav>

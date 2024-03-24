@@ -1,0 +1,42 @@
+/* ShoppingCart.css */
+
+.cart-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.product {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.product-details {
+    flex-grow: 1;
+}
+
+.product-details h3 {
+    margin-top: 0;
+}
+
+.product-details p {
+    margin: 5px 0;
+}
+
+.product-details button {
+    margin-right: 10px;
+}
+
+.total-price {
+    margin-top: 20px;
+    font-weight: bold;
+}
