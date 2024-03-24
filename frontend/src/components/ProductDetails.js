@@ -1,9 +1,25 @@
 import { Link, useLocation } from "react-router-dom";
 
-const ProductDetails = () => {
-  const { state: product } = useLocation();
 
+const ProductDetails = (cart) => {
+  const { state: product } = useLocation();
   const {img, title, description, category, brand, rating, price } = product;
+  
+  const addToCart = (id,img, title, brand) =>
+  {
+   const price = product.price
+    console.log("this price is " + price )
+    const obj = {
+      id,img, title, brand,price,quantity:1
+    }
+    const index = cart.cart.findIndex(product => product.id === obj.id);
+    if(index !== -1) {
+      cart.cart[index].quantity++;
+    } else {
+      cart.setCart([...cart.cart,obj]);
+      console.log("Cart element",cart.cart)
+    }
+  }
   return (
     <section className="flex flex-col gap-16 py-10 bg-gray-100">
       <div className="container mx-auto flex justify-around  items-center w-[80%]">
@@ -41,7 +57,7 @@ const ProductDetails = () => {
             </span>
           </h3>
           <button
-            onClick={() => console.log("ksk")}
+            onClick={() => addToCart(product.id,product.img,product.brand)}
             className="bg-sky-500 text-sky-50 px-2 py-1 mt-4"
           >
             add to cart
