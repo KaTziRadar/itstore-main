@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const SingleProduct = ({ product,cart}) => {
+const SingleProduct = ({ product,cart,cartSize,setCart,setCartSize}) => {
+  
   const { img, title, brand, price } = product;
 
   const addToCart = (id,img, title, brand, price) =>
@@ -9,12 +10,15 @@ const SingleProduct = ({ product,cart}) => {
     const obj = {
       id,img, title, brand, price,quantity:1
     }
-    const index = cart.cart.findIndex(product => product.id === obj.id);
+    const index = cart.findIndex(product => product.id === obj.id);
     if(index !== -1) {
-      cart.cart[index].quantity++;
+      cart[index].quantity++;
+      setCartSize([...cartSize,1])
     } else {
-      cart.setCart([...cart.cart,obj]);
-      console.log("Cart element",cart.cart)
+      setCart([...cart,obj]);
+      setCartSize([...cartSize,1])
+      console.log("Cart element",cart)
+      console.log("cart size is",cartSize);
     }
     
   }

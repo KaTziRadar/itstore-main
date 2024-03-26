@@ -3,7 +3,8 @@ import SingleProduct from "../components/SingleProduct";
 import { Link } from "react-router-dom";
 import { getAllProducts } from "../services/prodService";
 
-const Products = (cart,setCart) => {
+const Products = (cart) => {
+  
 
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
@@ -101,7 +102,7 @@ const Products = (cart,setCart) => {
           <div className="grid grid-cols-3 gap-10 ">
             {filterProducts &&
               filterProducts.map((product) => (
-                <SingleProduct key={product.id} product={product} cart={cart} setCart={setCart}/>
+                <SingleProduct key={product.id} product={product} cart={cart.cart} setCart={cart.setCart} cartSize={cart.cartSize} setCartSize={cart.setCartSize} />
               ))}
           </div>
         </div>

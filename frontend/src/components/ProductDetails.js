@@ -2,22 +2,26 @@ import { Link, useLocation } from "react-router-dom";
 
 
 const ProductDetails = (cart) => {
+  
   const { state: product } = useLocation();
   const {img, title, description, category, brand, rating, price } = product;
   
   const addToCart = (id,img, title, brand) =>
   {
    const price = product.price
-    console.log("this price is " + price )
+
     const obj = {
       id,img, title, brand,price,quantity:1
     }
     const index = cart.cart.findIndex(product => product.id === obj.id);
     if(index !== -1) {
       cart.cart[index].quantity++;
+      cart.setCartSize([...cart.cartSize,1]);
     } else {
       cart.setCart([...cart.cart,obj]);
+      cart.setCartSize([...cart.cartSize,1]);
       console.log("Cart element",cart.cart)
+      console.log("Cart element",cart.cartSize)
     }
   }
   return (

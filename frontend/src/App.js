@@ -16,18 +16,19 @@ import Cart from "./pages/Cart";
 
 const App = () => {
   const [cart,setCart] = useState([]);
+  const [cartSize,setCartSize] = useState([])
   return (
     <section className="">
-      <Navbar size={cart.length}/>
+      <Navbar size={cartSize.length}/>
 
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/product" element={<Product cart={cart} setCart={setCart} />} />
-          <Route path="product/:id" element={<ProductDetails cart={cart} setCart={setCart} />} />
-          <Route path="/:id" element={<ProductDetails cart={cart} setCart={setCart} />} />
-          <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
+          <Route path="/product" element={<Product cart={cart} setCart={setCart} cartSize={cartSize} setCartSize={setCartSize} />} />
+          <Route path="product/:id" element={<ProductDetails cart={cart} setCart={setCart} cartSize={cartSize} setCartSize={setCartSize} />} />
+          <Route path="/:id" element={<ProductDetails cart={cart} setCart={setCart} cartSize={cartSize} setCartSize={setCartSize} />} />
+          <Route path="/cart" element={<Cart cart={cart} setCart={setCart} cartSize={cartSize} setCartSize={setCartSize} />} />
           <Route path="*" element={<Notfound />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />

@@ -14,6 +14,7 @@ const convertToInteger = (str) => {
 };
 
 const handleQuantityChange = (productId, change) => {
+
   cart.setCart(prevCart => {
       const updatedCart = prevCart.map(item => {
           if (item.id === productId) {
@@ -26,6 +27,12 @@ const handleQuantityChange = (productId, change) => {
           }
           return item;
       });
+    if(change === 1)
+    {
+        cart.setCartSize([...cart.cartSize,1]);   
+    } else {
+        cart.setCartSize(cart.cartSize.slice(0, -1));
+    }
       // Filter out null values (items with zero quantity)
       return updatedCart.filter(item => item !== null);
   });
