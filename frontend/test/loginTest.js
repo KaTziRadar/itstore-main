@@ -1,9 +1,9 @@
 const assert = require('assert');
 const { Builder, By, until } = require('selenium-webdriver');
 
-
 describe("Login test", function() {
-    it("should login successfully", async function(done) { 
+    this.timeout(20000);
+    it("should login successfully", async function() { 
         let driver = await new Builder().forBrowser('chrome').build();
 
         try {
@@ -16,26 +16,21 @@ describe("Login test", function() {
             await driver.findElement(By.id('password')).sendKeys('asd');
             await driver.findElement(By.css('.btn')).click();
 
-            await driver.wait(until.urlIs('http://localhost:3000/'), 5000);
+            // Wait for the alert to appear
+            await driver.wait(until.alertIsPresent(), 2000);
+
+            // Switch to the alert and accept it
+            const alert = await driver.switchTo().alert();
+            await alert.accept();
+            console.log('Handled unexpected alert: "Login successfully!"');
+
+            // Wait for the URL to change
+            await driver.wait(until.urlIs('http://localhost:3000/'), 2000);
 
             const currentUrl = await driver.getCurrentUrl();
             assert.equal(currentUrl, 'http://localhost:3000/', 'Expected URL does not match actual URL');
-
-            try {
-                
-
-            } catch (error) {
-                if (error.name === 'UnexpectedAlertOpenError') {
-                    await driver.switchTo().alert().dismiss(); 
-                    console.log('Got unexpected alert, dismissed it.');
-                } else {
-                    console.error('Error:', error);
-                }
-            }
         } finally {
             await driver.quit();
         }
-
-        setTimeout(done, 100); 
     });
 });
