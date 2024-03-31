@@ -1,24 +1,42 @@
-const {Builder, By, Key, until} = require('selenium-webdriver');
+const { Builder, By, until, Browser } = require('selenium-webdriver');
+const assert = require('assert');
 
-(async function addToCart() {
-  let driver = await new Builder().forBrowser('firefox').build();
-  try {
-    // Navigate to the shopping website
-    await driver.get('http://localhost:3000/');
+describe("register test", async function() {
+    this.timeout(20000); // Set a longer timeout
 
-    // Wait for the button to be clickable
-    await driver.wait(until.elementLocated(By.css('bg-sky-400 text-sky-50 hover:bg-sky-50 hover:text-sky-400 duration-300 border border-sky-400 px-2 py-1 rounded-md')), 10000);
+    let driver;
 
-    // Click on the button to add the item to the cart
-    await driver.findElement(By.css('bg-sky-400 text-sky-50 hover:bg-sky-50 hover:text-sky-400 duration-300 border border-sky-400 px-2 py-1 rounded-md')).click();
+    beforeEach(async function() {
+        driver = await new Builder().forBrowser(Browser.CHROME).build();
+    });
 
-    // You can add further verification steps here if needed, like verifying the item is added to the cart
+    afterEach(async function() {
+        if (driver) {
+            await driver.quit();
+        }
+    });
 
-    console.log("Item added to cart successfully!");
-  } catch (error) {
-    console.error('An error occurred:', error);
-  } finally {
-    // Close the browser
-    await driver.quit();
-  }
-})();
+    it("should add item to cart", async function() {
+        await driver.get('http://localhost:3000/');
+        await driver.sleep(1000); // Add delay to observe page loading
+
+        const productLink = await driver.wait(until.elementLocated(By.linkText('Product')));
+        await productLink.click();
+
+        await driver.sleep(1000); // Add delay to observe navigation to product page
+
+        const cartIcon = await driver.findElement(By.className('cart'));
+        const initialCartCount = await cartIcon.getText();
+
+        const addToCartButton = await driver.wait(until.elementLocated(By.className('bg-sky-400 text-sky-50 hover:bg-sky-50 hover:text-sky-400 duration-300 border border-sky-400 px-2 py-1 rounded-md')), 10000);
+        await addToCartButton.click();
+
+        await driver.wait(async function() {
+            const currentCartCount = await cartIcon.getText();
+            return currentCartCount !== initialCartCount;
+        }, 5000);
+
+        const finalCartCount = await cartIcon.getText();
+        assert.strictEqual(parseInt(finalCartCount), parseInt(initialCartCount) + 1, 'Item was not added to cart successfully');
+    });
+});

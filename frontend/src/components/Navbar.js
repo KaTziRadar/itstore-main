@@ -52,9 +52,9 @@ const Navbar = ({size}) => {
               <NavLink to="/Ido">Ido</NavLink>
             </li>
             <li>
-                  <NavLink to="/cart" >
+                  <NavLink to="/cart" className="cart" >
                     <span>{size} </span>
-                    <FaShoppingCart />
+                    <FaShoppingCart  />
                   </NavLink>
                 </li>
             {isLoggedIn() &&
