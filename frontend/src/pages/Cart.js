@@ -57,7 +57,7 @@ return (
                           <p>Price: ${product.price}</p>
                           <p>Quantity: {product.quantity}</p>
                           <button onClick={() => handleQuantityChange(product.id, 1)}>Add</button>
-                          <button onClick={() => handleQuantityChange(product.id, -1)}>Delete</button>
+                          <button className='decrease' id='decrease' onClick={() => handleQuantityChange(product.id, -1)}>Delete</button>
                       </div>
                   </div>
               ))}
