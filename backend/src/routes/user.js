@@ -42,4 +42,17 @@ router.post("/login", async (req, res) => {
     console.log('\nLogging as: ' + user);
 });
 
+router.post("/delUser", async (req, res) => {
+    console.log('Trying to delete user: ', JSON.stringify(req.body.data));
+    const user = await UserModel.deleteOne({ _id: req.body.data.id });
+    console.log('temp: ', user)
+    if (!user.deletedCount) {
+        console.log("User not exists")
+        return res.status(400).json({ message: "User not exists" });
+    }
+
+    res.status(200).json({ message: 'User deleted successfully' });
+    console.log('\nUser deleted successfully');
+});
+
 module.exports = { userRouter: router };

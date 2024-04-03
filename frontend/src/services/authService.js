@@ -1,5 +1,5 @@
 import axios from 'axios';
-const backendURL = 'https://itstore-main.onrender.com' //'http://localhost:3001';
+const backendURL = 'http://localhost:3001'; //'https://itstore-main.onrender.com' 
 
 async function registration(data) {
     try {
@@ -8,7 +8,7 @@ async function registration(data) {
         return (res);
     } catch (err) {
         if (err.response && err.response.status === 400)
-            return (err.response.data.message); //{ printErrorMsg(JSON.stringify(err.response.data.message)); console.log("hello") }
+            return (err.response.data.message);
         else
             console.error(err);
         return (err.message); // returning "network error" if server is down
@@ -22,11 +22,26 @@ async function login(data) {
         return (res);
     } catch (err) {
         if (err.response && err.response.status === 400)
-            return (err.response.data.message); //{ printErrorMsg(JSON.stringify(err.response.data.message)); console.log("hello") }
+            return (err.response.data.message);
         else
             console.error(err);
         return (err.message); // returning "network error" if server is down
     }
 }
 
-export { registration, login };
+async function deleteUser(data) {
+    try {
+        const res = await axios.post(backendURL + "/auth/delUser", { data });
+        alert("User deleted successfully!");
+        return (res);
+    } catch (err) {
+        if (err.response && err.response.status === 400)
+            return (err.response.data.message);
+        else
+            console.error(err);
+        return (err.message); // returning "network error" if server is down
+    }
+}
+
+
+export { registration, login, deleteUser };
