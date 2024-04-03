@@ -1,7 +1,7 @@
 const { Builder, By, until, Browser } = require('selenium-webdriver');
 const assert = require('assert');
 
-describe("register test", async function() {
+describe("add to cart test", async function() {
     this.timeout(20000); // Set a longer timeout
 
     let driver;
@@ -30,11 +30,6 @@ describe("register test", async function() {
 
         const addToCartButton = await driver.wait(until.elementLocated(By.className('bg-sky-400 text-sky-50 hover:bg-sky-50 hover:text-sky-400 duration-300 border border-sky-400 px-2 py-1 rounded-md')), 10000);
         await addToCartButton.click();
-
-        await driver.wait(async function() {
-            const currentCartCount = await cartIcon.getText();
-            return currentCartCount !== initialCartCount;
-        }, 5000);
 
         const finalCartCount = await cartIcon.getText();
         assert.strictEqual(parseInt(finalCartCount), parseInt(initialCartCount) + 1, 'Item was not added to cart successfully');
