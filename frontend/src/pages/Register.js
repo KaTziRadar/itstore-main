@@ -20,7 +20,7 @@ function register() {
         let cnfrmPassword = document.getElementById('cnfrm-password').value;
 
         const mailValidation = (mail) => {
-            const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]+$/;
+            const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
 
             if (regex.test(mail))
                 return true;
