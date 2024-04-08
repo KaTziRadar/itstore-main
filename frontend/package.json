@@ -16,6 +16,7 @@
     "react-scripts": "5.0.1",
     "react-use-cart": "^1.13.0",
     "selenium-server-standalone": "^2.53.1",
+    "selenium-server-standalone-jar": "^4.19.1",
     "selenium-webdriver": "^4.19.0",
     "web-vitals": "^2.1.4"
   },
@@ -24,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-selenium": "java -jar node_modules/selenium-server-standalone/selenium-server-4.19.0.jar standalone"
+    "start-selenium": "java -jar ./node_modules/selenium-server-standalone-jar/jar/selenium-server-4.19.1.jar standalone"
   },
   "eslintConfig": {
     "extends": [

@@ -6,6 +6,7 @@ describe('Load test with Selenium Grid', function () {
   let drivers = [];
 
   before(async function () {
+    this.timeout(10000);
     let chromeCapabilities = Capabilities.chrome();
     let driver = await new Builder()
       .usingServer('http://localhost:4444/wd/hub')
