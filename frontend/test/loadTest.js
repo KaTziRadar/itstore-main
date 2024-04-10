@@ -5,7 +5,7 @@ const assert = require('assert');
 describe('Load test with Selenium Grid', function () {
   let drivers = [];
 
-  before(async function () {
+  beforeEach(async function () {
     let chromeCapabilities = Capabilities.chrome();
     let driver = await new Builder()
       .usingServer('http://localhost:4444/wd/hub')
@@ -14,7 +14,7 @@ describe('Load test with Selenium Grid', function () {
     drivers.push(driver);
   });
 
-  after(async function () {
+  afterEach(async function () {
     await Promise.all(drivers.map(async (driver) => {
       await driver.quit();
     }));

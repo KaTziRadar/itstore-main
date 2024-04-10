@@ -24,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-selenium": "java -jar node_modules/selenium-server-standalone/selenium-server-4.19.0.jar standalone"
+    "start-selenium": "java -jar node_modules/selenium-server-standalone/selenium-server-4.19.0.jar standalone",
+    "test_webDriver": "mocha test/**/*.spec.js"
   },
   "eslintConfig": {
     "extends": [
