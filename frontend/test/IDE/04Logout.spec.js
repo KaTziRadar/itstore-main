@@ -21,14 +21,23 @@ describe('04_Logout', function() {
       await driver.findElement(By.id("email")).sendKeys("test@test.test")
       await driver.findElement(By.id("password")).sendKeys("test123")
       await driver.findElement(By.css(".btn")).click()
-      assert(await driver.switchTo().alert().getText() == "Login successfully!")
+      await driver.wait(until.alertIsPresent());
+      let alert = await driver.switchTo().alert();
+      console.log(alert.getText());
+      await driver.sleep(3000);
+      await alert.getText().then(function(text) {
+      assert(text == "Login successfully!");
+    });    
+      await alert.accept(); 
       vars["url"] = await driver.executeScript("return window.location.href;")
       assert(vars["url"].toString() == "http://localhost:3000/")
       console.log(vars["userID"])
     }
     await driver.findElement(By.linkText("Logout")).click()
     vars["userID"] = await driver.executeScript("return localStorage.getItem(\"userID\")")
-    assert(vars["userID"].toString() == "null")
+    if (vars["userID"] !== null) {
+      assert(vars["userID"].toString() == "null");
+  }  
     vars["url"] = await driver.executeScript("return window.location.href;")
     assert(vars["url"].toString() == "http://localhost:3000/login")
   })

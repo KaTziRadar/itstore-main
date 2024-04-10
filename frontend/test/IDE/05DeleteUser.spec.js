@@ -21,22 +21,47 @@ describe('05_DeleteUser', function() {
       await driver.findElement(By.id("email")).sendKeys("test@test.test")
       await driver.findElement(By.id("password")).sendKeys("test123")
       await driver.findElement(By.css(".btn")).click()
-      assert(await driver.switchTo().alert().getText() == "Login successfully!")
+      await driver.wait(until.alertIsPresent(), 2000);
+      let alert = await driver.switchTo().alert();
+      console.log(alert.getText());
+      await driver.sleep(3000);
+      await alert.getText().then(function(text) {
+        assert(text == "Login successfully!");
+      }); 
+      await alert.accept(); 
       vars["url"] = await driver.executeScript("return window.location.href;")
       assert(vars["url"].toString() == "http://localhost:3000/")
     }
     await driver.findElement(By.linkText("Delete User")).click()
-    assert(await driver.switchTo().alert().getText() == "User deleted successfully!")
+    await driver.wait(until.alertIsPresent(), 2000);
+    let alert1 = await driver.switchTo().alert();
+    console.log(alert1.getText());
+    await driver.sleep(3000);
+    await alert1.getText().then(function(text) {
+      assert(text == "User deleted successfully!");
+    }); 
+    await alert1.accept(); 
     await driver.findElement(By.linkText("Login")).click()
     await driver.findElement(By.id("email")).sendKeys("test@test.test")
     await driver.findElement(By.id("password")).sendKeys("test123")
     await driver.findElement(By.css(".btn")).click()
-    assert(await driver.findElement(By.id("message")).getText() == "Email does not exists")
+    const messageElement = await driver.findElement(By.id("message"));
+    const messageText = await messageElement.getText();
+    console.log(messageElement.getText());
+    await driver.sleep(2000);
+    assert.equal(messageText,"Email does not exists");
     await driver.get("http://localhost:3000/register")
-    await driver.findElement(By.id("email")).sendKeys(" test@test.test")
+    await driver.findElement(By.id("email")).sendKeys("test@test.test")
     await driver.findElement(By.id("password")).sendKeys("test123")
     await driver.findElement(By.id("cnfrm-password")).sendKeys("test123")
     await driver.findElement(By.css(".btn")).click()
-    assert(await driver.switchTo().alert().getText() == "Registration successfully!")
+    await driver.wait(until.alertIsPresent(), 2000);
+    let alert = await driver.switchTo().alert();
+    console.log(alert.getText());
+    await driver.sleep(3000);
+    await alert.getText().then(function(text) {
+      assert(text == "Registration successfully!");
+    }); 
+    await alert.accept(); 
   })
 })

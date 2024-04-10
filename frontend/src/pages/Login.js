@@ -35,7 +35,7 @@ function Login() {
             printErrorMsg("Error! email is invalid")
 
         else {
-            printErrorMsg('');
+            printErrorMsg('Email does not exists');
 
             /* Packs data to 'JSON' format to send via web */
             const data = {

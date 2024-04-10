@@ -28,10 +28,20 @@ describe('01_Register', function() {
     await driver.findElement(By.id("password")).sendKeys("test123")
     await driver.findElement(By.id("cnfrm-password")).sendKeys("test123")
     await driver.findElement(By.css(".btn")).click()
-    assert(await driver.findElement(By.id("message")).getText() == "Email already exists")
+    const messageElement = await driver.findElement(By.id("message"));
+    const messageText = await messageElement.getText();
+    await driver.sleep(2000);
+    console.log(messageElement.getText());
+    await driver.sleep(2000);
+    assert.equal(messageText,"Email already exists");
     await driver.findElement(By.id("cnfrm-password")).sendKeys("test12")
     await driver.findElement(By.css(".btn")).click()
-    assert(await driver.findElement(By.id("message")).getText() == "Error! passwords not match")
+    const messageElement1 = await driver.findElement(By.id("message"));
+    const messageText1 = await messageElement1.getText();
+    await driver.sleep(2000);
+    console.log(messageElement1.getText());
+    await driver.sleep(2000);
+    assert.equal(messageText1,"Error! passwords not match");
     await driver.findElement(By.id("cnfrm-password")).sendKeys(" ")
     await driver.findElement(By.css(".btn")).click()
     assert(await driver.findElement(By.id("message")).getText() == "Error! fields can\\\'t be empty")
