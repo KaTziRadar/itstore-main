@@ -1,7 +1,7 @@
 const { Builder, By, until, Browser } = require('selenium-webdriver');
 const assert = require('assert');
 
-describe("NavBar test", async function() {
+describe("NavBar test", function() {
     this.timeout(20000); // Set a longer timeout
 
     let driver;
