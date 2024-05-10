@@ -1,0 +1,29 @@
+# Use a base image with Node.js installed
+FROM node:alpine as build
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json from the parent directory
+COPY package.json package-lock.json ./
+
+# Install dependencies
+RUN npm install --silent
+
+# Copy the rest of the application files
+COPY . .
+
+# Build the application
+RUN npm run build
+
+# Use a lightweight Nginx image as the final image
+FROM nginx:alpine
+
+# Copy the built files from the previous stage to the NGINX directory
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Expose port 80 to the outside world
+EXPOSE 80
+
+# Command to run the NGINX server
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,26 +1,22 @@
-name: Node.js Package
+name: Docker Build and Test
 
 on:
   push:
     branches:
-      - develop
+      - main
+      - devlop
+      - ci_test
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - run: npm --prefix ./backend/ install
-      - run: npm --prefix ./frontend/ install
 
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - run: npm --prefix ./backend/ install
-      - run: npm --prefix ./frontend/ install
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: docker build -t ci-test .
+
+    - name: Test Docker container
+      run: docker run ci-test npm test
