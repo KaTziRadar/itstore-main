@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 
 # Install dependencies, including Mocha as a development dependency
-RUN npm install --silent
+RUN npm install 
 
 # Install Mocha globally
 RUN npm install --global mocha
