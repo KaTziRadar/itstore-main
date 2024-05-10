@@ -1,4 +1,4 @@
-# Use a base Node.js image
+# Use a base image with Node.js installed
 FROM node:alpine as build
 
 # Set the working directory inside the container
@@ -7,9 +7,11 @@ WORKDIR /app
 # Copy package.json and package-lock.json from the parent directory
 COPY package.json package-lock.json ./
 
-# Install Node.js dependencies
-RUN npm install 
-RUN npm install -g mocha
+# Install dependencies, including Mocha as a development dependency
+RUN npm install --silent
+
+# Install Mocha globally
+RUN npm install --global mocha
 
 # Copy the rest of the application files
 COPY . .
