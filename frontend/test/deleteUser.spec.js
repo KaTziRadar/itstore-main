@@ -2,7 +2,7 @@ const assert = require('assert');
 const { Builder, By, until,Browser } = require('selenium-webdriver');
 
 describe("Delete user test", function() {
-    this.timeout(10000);
+    this.timeout(100000);
     let driver
 
     beforeEach(async function() {

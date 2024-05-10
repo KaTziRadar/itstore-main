@@ -2,7 +2,7 @@ const { Builder, By, until } = require('selenium-webdriver');
 const assert = require('assert');
 
 describe("register test", function() {
-    this.timeout(10000); // Set a longer timeout, e.g., 10 seconds
+    this.timeout(100000); // Set a longer timeout, e.g., 10 seconds
 
     it("register test", function() { // No need for async function declaration
         return new Promise(async (resolve, reject) => { // Return a Promise

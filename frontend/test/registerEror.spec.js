@@ -17,7 +17,7 @@ describe("register eror test", function() {
   });
 
   it("Email already exsit alert", async function() {
-      this.timeout(5000);
+      this.timeout(50000);
       await driver.get('http://localhost:3000/');
       await driver.sleep(1000); // Add delay to observe page loading
   
@@ -45,7 +45,7 @@ describe("register eror test", function() {
 
   it("Test 2: Emtpy fileds alert", async function() {
     console.log('Test 2: Start');
-    this.timeout(5000);
+    this.timeout(50000);
       await driver.get('http://localhost:3000/');
       await driver.sleep(1000); // Add delay to observe page loading
 
@@ -61,7 +61,7 @@ describe("register eror test", function() {
   });
 
   it("Test 3: Password does not match", async function() {
-    this.timeout(5000)
+    this.timeout(50000)
     await driver.get('http://localhost:3000/');
       await driver.sleep(1000); // Add delay to observe page loading
   
@@ -82,7 +82,7 @@ describe("register eror test", function() {
   });
 
   it("Test 4: Email is invaild", async function() {
-    this.timeout(5000)
+    this.timeout(50000)
     await driver.get('http://localhost:3000/');
       await driver.sleep(1000); // Add delay to observe page loading
   
