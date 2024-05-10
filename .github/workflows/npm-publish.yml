@@ -23,5 +23,8 @@ jobs:
     - name: Install dependencies
       run: npm install --prefix frontend
 
+    - name: Install WebDriver
+      run: npm install selenium-webdriver
+
     - name: Run WebDriver tests
       run: npm run test_webDriver --prefix frontend
