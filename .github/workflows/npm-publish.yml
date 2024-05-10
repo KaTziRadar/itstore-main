@@ -18,5 +18,8 @@ jobs:
     - name: Build Docker image
       run: docker build -t katzir/ci-test frontend
 
+    - name: Install dependencies
+      run: docker run katzir/ci-test npm install
+
     - name: Test Docker container
       run: docker run katzir/ci-test mocha frontend/test/*.spec.js
