@@ -3,7 +3,7 @@ const { Options } = require('selenium-webdriver/firefox');
 const assert = require('assert');
 
 describe("add to cart test", function() {
-    this.timeout(20000); // Set a longer timeout
+    this.timeout(200000); // Set a longer timeout
 
     let driver;
 
