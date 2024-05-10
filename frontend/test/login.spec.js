@@ -4,7 +4,7 @@ const { Builder, By, until } = require('selenium-webdriver');
 describe("Login test", function() {
     this.timeout(20000);
     it("should login successfully", async function() { 
-        let driver = await new Builder().forBrowser('chrome').build();
+        let driver = await new Builder().forBrowser('firefox').build();
 
         try {
             await driver.get("http://localhost:3000/");
