@@ -1,13 +1,13 @@
 # Use a base image with Node.js installed
-FROM node:14-alpine as build
+FROM node:alpine as build
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json from the parent directory
-COPY package.json package-lock.json ./
+# Copy package.json and package-lock.json from the frontend directory
+COPY frontend/package.json frontend/package-lock.json ./
 
-# Install dependencies
+# Install dependencies, including Mocha as a development dependency
 RUN npm install --silent
 
 # Install Mocha globally
@@ -21,9 +21,6 @@ RUN npm run build
 
 # Use a lightweight Nginx image as the final image
 FROM nginx:alpine
-
-# Install Node.js and npm in the Nginx image
-RUN apk add --no-cache nodejs npm
 
 # Copy the built files from the previous stage to the NGINX directory
 COPY --from=build /app/build /usr/share/nginx/html
