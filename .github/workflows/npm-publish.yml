@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Docker image
-      run: docker build -t ci-test .
+      run: docker build -t katzir/ci-test .
 
     - name: Test Docker container
-      run: docker run ci-test npm test
+      run: docker run katzir/ci-test npm test
