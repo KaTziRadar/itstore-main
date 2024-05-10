@@ -19,4 +19,4 @@ jobs:
       run: docker build -t katzir/ci-test frontend
 
     - name: Test Docker container
-      run: docker run katzir/ci-test npm test
+      run: docker run katzir/ci-test mocha test/*.spec.js
