@@ -9,8 +9,7 @@ on:
 
 jobs:
   run-tests:
-    runs-on: windows-latest  # Change this to run on Windows
-
+    runs-on: ubuntu-latest  
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -27,4 +26,4 @@ jobs:
       run: |
              cd frontend
              docker build -t katzir/ci-test .
-             docker run katzir/ci-test npm run test_webDriver
+             docker run ci-test npm run test_webDriver
