@@ -9,7 +9,7 @@ describe("register test", function() {
             let driver;
             try {
                 
-                driver = await new Builder().forBrowser('chrome').build();
+                driver = await new Builder().forBrowser('firefox').build();
 
                 await driver.get('http://localhost:3000/');
 

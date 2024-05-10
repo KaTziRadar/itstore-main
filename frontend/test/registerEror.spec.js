@@ -1,4 +1,4 @@
-const { Builder, By, until } = require('selenium-webdriver');
+const { Builder, By, until, Browser } = require('selenium-webdriver');
 const assert = require('assert');
 
 describe("register eror test", function() {
@@ -6,7 +6,7 @@ describe("register eror test", function() {
 
   // Hook to setup WebDriver instance before tests
   beforeEach(async function() {
-    driver = await new Builder().forBrowser('chrome').build();
+    driver = await new Builder().forBrowser(Browser.FIREFOX).build();
   });
 
   // Hook to close WebDriver instance after tests

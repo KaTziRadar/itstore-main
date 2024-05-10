@@ -5,7 +5,7 @@ describe("Login Eror test", function() {
     let driver 
      // Hook to setup WebDriver instance before tests
   beforeEach(async function() {
-    driver = await new Builder().forBrowser('chrome').build();
+    driver = await new Builder().forBrowser('firefox').build();
   });
 
   // Hook to close WebDriver instance after tests
