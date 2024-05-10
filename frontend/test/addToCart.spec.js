@@ -1,4 +1,4 @@
-import { FirefoxOptions } from 'selenium-webdriver/firefox';
+const { FirefoxOptions } = require('selenium-webdriver/firefox');
 const { Builder, By, until, Browser, Options } = require('selenium-webdriver');
 const assert = require('assert');
 
