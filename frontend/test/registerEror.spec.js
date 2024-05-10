@@ -11,7 +11,9 @@ describe("register eror test", function() {
 
   // Hook to close WebDriver instance after tests
   afterEach(async function() {
-    await driver.quit();
+    if (driver) {
+      await driver.quit();
+  }
   });
 
   it("Email already exsit alert", async function() {

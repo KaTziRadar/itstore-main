@@ -10,7 +10,9 @@ describe("Login Eror test", function() {
 
   // Hook to close WebDriver instance after tests
   afterEach(async function() {
-    await driver.quit();
+    if (driver) {
+      await driver.quit();
+  }
   });
 
     it("Empty fileds", async function() { 
