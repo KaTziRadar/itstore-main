@@ -1,22 +1,24 @@
-const { FirefoxOptions } = require('selenium-webdriver/firefox');
-const { Builder, By, until, Browser, Options } = require('selenium-webdriver');
+const { Builder, By, until } = require('selenium-webdriver');
+const { Options } = require('selenium-webdriver/firefox');
 const assert = require('assert');
 
-describe("add to cart test",function() {
+describe("add to cart test", function() {
     this.timeout(20000); // Set a longer timeout
 
     let driver;
-    let opts = FirefoxOptions()
-    opts.add_argument("--headless")
 
     beforeEach(async function() {
-        driver = await new Builder().forBrowser(Browser.FIREFOX(Options=opts)).build();
+        let options = new Options();
+        options.addArguments("--headless");
+
+        driver = await new Builder()
+            .forBrowser('firefox')
+            .setFirefoxOptions(options)
+            .build();
     });
 
     afterEach(async function() {
-        if (driver) {
-            await driver.quit();
-        }
+        await driver.quit();
     });
 
     it("should add item to cart", async function() {
