@@ -23,5 +23,7 @@ jobs:
     - name: Install dependencies
       run: npm install --prefix frontend
 
-    - name: Run WebDriver tests with Chrome
-      run: npm run test_webDriver --prefix frontend
+    - name: Build and run Docker container
+      run: |
+             docker build -t ci-test .
+             docker run ci-test npm run test_webDriver
