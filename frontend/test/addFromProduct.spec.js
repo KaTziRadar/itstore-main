@@ -1,5 +1,4 @@
-const { FirefoxOptions } = require('selenium-webdriver/firefox');
-const { Builder, By, Browser } = require('selenium-webdriver');
+const { Builder, By, Browser,FirefoxOptions } = require('selenium-webdriver');
 const assert = require('assert');
 
 
