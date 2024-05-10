@@ -34,5 +34,16 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Change directory to frontend
+      run: cd frontend
+
     - name: Run Docker container and execute tests
       run: docker run katzir/ci-test npm run test_webDriver
