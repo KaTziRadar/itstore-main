@@ -19,6 +19,14 @@ jobs:
       with:
         node-version: '14'
 
+    - name: Find Firefox Path
+      run: |
+          # Search for Firefox executable
+          FIREFOX_PATH=$(find / -name firefox 2>/dev/null)
+  
+          # Print the path
+          echo "Firefox path: $FIREFOX_PATH"
+
     - name: Install dependencies
       run: npm install --prefix frontend
 
