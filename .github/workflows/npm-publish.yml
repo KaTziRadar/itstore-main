@@ -19,39 +19,13 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Find Firefox Path
-      run: |
-          # Search for Firefox executable
-          FIREFOX_PATH=$(find / -name firefox 2>/dev/null)
-  
-          # Print the path
-          echo "Firefox path: $FIREFOX_PATH"
+    - name: Install Firefox
+      run: sudo apt-get update && sudo apt-get install -y firefox
 
-    - name: Install dependencies
-      run: npm install --prefix frontend
-
-    - name: Install WebDriver
-      run: npm install selenium-webdriver
-
-    - name: Install Chrome browser and WebDriver
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y wget gnupg
-        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
-        wget https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_linux64.zip
-        sudo unzip chromedriver_linux64.zip -d /usr/local/bin
-        rm chromedriver_linux64.zip
-
-    - name: Build Docker container
+    - name: Install dependencies and run Docker container
       run: |
         cd frontend
+        npm install --prefix frontend
+        npm install selenium-webdriver
         docker build -t katzir/ci-test .
-      
-    - name: Run Docker container
-      run:  docker run katzir/ci-test
-      working-directory: frontend
-
-      
+        docker run katzir/ci-test
