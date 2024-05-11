@@ -27,10 +27,7 @@ jobs:
 
     - name: Build Docker container
       run: |
-        ls
-        pwd
         cd frontend
-        pwd
         docker build -t katzir/ci-test .
 
   
@@ -38,5 +35,6 @@ jobs:
     - name: Run Docker container and execute tests
       run: |
        cd frontend
+       pwd
        docker run katzir/ci-test npm run test_webDriver
        
