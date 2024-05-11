@@ -31,7 +31,7 @@ jobs:
         docker build -t katzir/ci-test .
       
     - name: Run Docker container
-      run: cd frontend && pwd && docker run katzir/ci-test
+      run: pwd && cd frontend && docker run katzir/ci-test
       working-directory: frontend
 
     - name: Execute tests
