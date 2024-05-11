@@ -9,7 +9,7 @@ describe("product categories test",function() {
     let driver;
 
     beforeEach(async function() {
-        let options = chrome.Options();
+        let options = new chrome.Options();
         options.add_argument("-headless")
         driver = await new Builder().withCapabilities(options).build();
     });
