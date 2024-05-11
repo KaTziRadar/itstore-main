@@ -19,7 +19,7 @@ const Navbar = ({ size }) => {
 
     const res = await deleteUser(data);
     console.log('delete user result: ', res)
-    if (res && res.status == 200) {
+    if (res && res.status === 200) {
       console.log('res delete user: ' + JSON.stringify(res.data));
       logout();
     }
