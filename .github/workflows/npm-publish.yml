@@ -45,5 +45,8 @@ jobs:
     - name: Change directory to frontend
       run: cd frontend
 
+    - name: Print current working directory
+      run: pwd
+
     - name: Run Docker container and execute tests
       run: docker run katzir/ci-test npm run test_webDriver
