@@ -22,7 +22,7 @@ jobs:
 
     - name: Install dependencies
 
-      run: pwd npm install --prefix frontend
+      run: pwd && npm install --prefix frontend
 
     - name: Install WebDriver and Chrome browser
       run: |
