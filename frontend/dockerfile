@@ -19,6 +19,9 @@ COPY . .
 # Install node-polyfill-webpack-plugin to polyfill Node.js core modules
 RUN npm install node-polyfill-webpack-plugin --save-dev
 
+# Add a webpack.config.js file with resolve fallback for 'crypto' module
+RUN echo "module.exports = { resolve: { fallback: { 'crypto': require.resolve('crypto-browserify') } } }" > webpack.config.js
+
 # Build the application
 RUN npm run build
 

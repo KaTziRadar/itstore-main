@@ -1,5 +1,3 @@
-/* eslint-disable */
-/* the line above disables eslint check for this file (temporarily) todo:delete */
 import React from 'react';
 import './styles/RegisterStyle.css';
 import { useNavigate } from 'react-router-dom';
@@ -46,7 +44,7 @@ function Login() {
 
             const res = await login(data);
             console.log('log res ' + res)
-            if (res && res.status == 200) {
+            if (res && res.status === 200) {
                 console.log('res login: ' + JSON.stringify(res.data));
                 window.localStorage.setItem("userID", res.data.userID);
                 navigate("/");
