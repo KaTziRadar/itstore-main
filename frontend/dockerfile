@@ -1,23 +1,20 @@
-# Use a base image with Node.js installed
+# Use a base image with Node.js and Chromium installed
 FROM node:alpine
 
 # Set the working directory inside the container
 WORKDIR /app
 
+# Install Chromium and ChromeDriver
+RUN apk add --no-cache chromium chromium-chromedriver
+
 # Copy package.json and package-lock.json from the frontend directory
 COPY package.json package-lock.json ./
 
-# Install dependencies, including Mocha as a development dependency
-RUN npm install --silent
-
-# Install Mocha globally
-RUN npm install --global mocha
+# Install dependencies
+RUN npm install
 
 # Copy the rest of the application files
 COPY . .
-
-# Build the application
-RUN npm run build
 
 # Expose port 3000 (or any other port your server is running on)
 EXPOSE 3000
