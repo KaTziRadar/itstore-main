@@ -8,13 +8,9 @@ describe("add product from categories test", function() {
     let driver;
 
     beforeEach(async function() {
-        const chromeOptions = new chrome.Options();
-        chromeOptions.addArguments("--headless");
-        
-
-        driver = await new Builder().forBrowser(Browser.CHROME)
-        .setChromeOptions(chromeOptions)
-        .build();
+             driver = new Builder().forBrowser('chrome')
+            .setChromeOptions(new chrome.Options().addArguments('--headless'))
+            .build();
     });
 
     afterEach(async function() {
