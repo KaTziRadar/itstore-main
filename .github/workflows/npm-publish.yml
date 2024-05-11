@@ -7,12 +7,20 @@ on:
       - develop
       - ci_test_new
 
+ 
+           
+
 jobs:
   build:
     runs-on: macos-latest  
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+
+    - name: Install jq tool
+      run: |
+        sudo apt-get update
+        sudo apt-get install jq
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
