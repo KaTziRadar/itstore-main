@@ -29,7 +29,7 @@ jobs:
       run: |
         pwd
         cd frontend
-        pww
+        pwd
         docker build -t katzir/ci-test .
 
     - name: Print current directory
