@@ -22,13 +22,7 @@ jobs:
 
     - name: Install dependencies
 
-      run: pwd && cd frontend && pwd && npm install --prefix frontend
-
-    - name: Install WebDriver and Chrome browser
-      run: |
-        choco install googlechrome -y  # Use Chocolatey to install Chrome
-        choco install chromedriver -y  # Install Chromedriver
-        refreshenv  # Refresh environment variables after installation
+      run: cd frontend && npm install --prefix frontend
 
     - name: Build Docker container
       run: |
