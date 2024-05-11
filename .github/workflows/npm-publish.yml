@@ -41,4 +41,4 @@ jobs:
        pwd
             
     - name: Run Docker container and execute tests
-      run: docker run katzir/ci-test npm run test_webDriver
+      run: pwd docker run katzir/ci-test npm run test_webDriver
