@@ -27,35 +27,13 @@ jobs:
 
     - name: Build Docker container
       run: |
+        pwd
         cd frontend
+        pww
         docker build -t katzir/ci-test .
 
-  run-tests:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-    - name: Navigate out of workflows folder
-      run: cd ..
-      
     - name: Print current directory
       run: pwd
-      
-    - name: Navigate to frontend folder
-      run: cd frontend
-      
-    - name: Print current directory
-      run: pwd
-      
-    - name: List contents of frontend directory
-      run: ls
-      
-  
+            
     - name: Run Docker container and execute tests
       run: docker run katzir/ci-test npm run test_webDriver
