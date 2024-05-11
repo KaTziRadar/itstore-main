@@ -38,5 +38,5 @@ jobs:
     - name: Run Docker container and execute tests
       run: |
        cd frontend
-       docker run katzir/ci-test
-       npm run test_webDriver
+       docker run katzir/ci-test npm run test_webDriver
+       
