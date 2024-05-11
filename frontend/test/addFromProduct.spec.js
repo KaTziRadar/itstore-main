@@ -1,6 +1,6 @@
 const { Builder, By, Browser,Options, Capabilities } = require('selenium-webdriver');
 const assert = require('assert');
-costt chrome = require('selenium-webdriver/chrome'); // Import chrome module
+const chrome = require('selenium-webdriver/chrome'); // Import chrome module
 
 describe("add product from categories test", function() {
     this.timeout(10000); // Set a longer timeout
@@ -10,7 +10,7 @@ describe("add product from categories test", function() {
     beforeEach(async function() {
         const chromeOptions = new chrome.Options();
         chromeOptions.addArguments("--headless");
-        const chromeCapabilities = Capabilities.chrome().set('goog:chromeOptions', chromeOptions);
+        
 
         driver = await new Builder().forBrowser(Browser.CHROME)
         .setChromeOptions(chromeOptions)
