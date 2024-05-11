@@ -9,7 +9,9 @@ describe("add to cart test",function() {
 
     beforeEach(async function() {
         // Specify the path to the Firefox binary
-        const firefoxOptions = new Options().setBinary('/usr/bin/firefox');
+        const firefoxOptions = new Options()
+            .setBinary('/usr/bin/firefox')
+            .headless();
 
         driver = await new Builder()
             .forBrowser(Browser.FIREFOX)
