@@ -42,9 +42,15 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Change directory to frontend
-      run: cd frontend
+    - name: Navigate out of workflows folder
+      run: cd ..
 
+    - name: Print current working directory
+      run: pwd   
+
+    - name: Navigate to frontend folder
+      run: cd frontend
+      
     - name: Print current working directory
       run: pwd
 
