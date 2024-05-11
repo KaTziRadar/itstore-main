@@ -16,11 +16,11 @@ RUN npm install --global mocha
 # Copy the rest of the application files
 COPY . .
 
+# Install node-polyfill-webpack-plugin to polyfill Node.js core modules
+RUN npm install node-polyfill-webpack-plugin --save-dev
+
 # Build the application
 RUN npm run build
-
-# Add a fallback for the 'crypto' module for webpack
-RUN echo "resolve.fallback = { 'crypto': require.resolve('crypto-browserify') }" >> node_modules/webpack/lib/config/defaults.js
 
 # Use a lightweight Nginx image as the final image
 FROM nginx:alpine
