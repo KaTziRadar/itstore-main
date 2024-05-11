@@ -7,7 +7,7 @@ describe("add product from categories test", function() {
     let driver;
 
     beforeEach(async function() {
-        driver = await new Builder().forBrowser(Browser.CHROME).build();
+        driver = await new Builder().forBrowser(Browser.INTERNET_EXPLORER).build();
     });
 
     afterEach(async function() {
