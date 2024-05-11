@@ -1,5 +1,7 @@
 const { Builder, By, until, Browser } = require('selenium-webdriver');
 const assert = require('assert');
+const chrome = require('selenium-webdriver/chrome'); // Import chrome module
+
 
 describe("product categories test",function() {
     this.timeout(20000); // Set a longer timeout
@@ -7,7 +9,9 @@ describe("product categories test",function() {
     let driver;
 
     beforeEach(async function() {
-        driver = await new Builder().forBrowser(Browser.CHROME).build();
+        driver = await new Builder().forBrowser(Browser.CHROME)
+            .setChromeOptions(new chrome.Options().headless()) // Set Chrome options for headless mode
+            .build();
     });
 
     afterEach(async function() {
