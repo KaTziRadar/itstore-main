@@ -9,7 +9,8 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  
+    runs-on: windows-latest  # Switched to Windows environment
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -22,28 +23,18 @@ jobs:
     - name: Install dependencies
       run: npm install --prefix frontend
 
-    - name: Install WebDriver
-      run: npm install selenium-webdriver
-
-    - name: Install Chrome browser and WebDriver
+    - name: Install WebDriver and Chrome browser
       run: |
-        sudo apt-get update
-        sudo apt-get install -y wget gnupg
-        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-        sudo apt-get update
-        sudo apt-get install -y google-chrome-stable
-        wget https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_linux64.zip
-        sudo unzip chromedriver_linux64.zip -d /usr/local/bin
-        rm chromedriver_linux64.zip
+        choco install googlechrome -y  # Use Chocolatey to install Chrome
+        choco install chromedriver -y  # Install Chromedriver
+        refreshenv  # Refresh environment variables after installation
 
     - name: Build Docker container
       run: |
         cd frontend
         docker build -t katzir/ci-test .
-      
-    - name: Run Docker container
-      run:  docker run katzir/ci-test
-      working-directory: frontend
 
-      
+    - name: Run Docker container
+      run: |
+        docker run katzir/ci-test
+      working-directory: frontend  # Set working directory for Docker run command
