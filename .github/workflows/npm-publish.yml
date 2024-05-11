@@ -33,12 +33,10 @@ jobs:
         pwd
         docker build -t katzir/ci-test .
 
-    - name: Print current directory
-      run: |
-       ls
-       pwd
-       cd frontend
-       pwd
+  
             
     - name: Run Docker container and execute tests
-      run: pwd docker run katzir/ci-test npm run test_webDriver
+      run: |
+       cd frontend
+       docker run katzir/ci-test
+       npm run test_webDriver
