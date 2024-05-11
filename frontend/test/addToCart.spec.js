@@ -1,5 +1,6 @@
 const { Builder, By, until, Browser } = require('selenium-webdriver');
 const assert = require('assert');
+const { Options } = require('selenium-webdriver/firefox');
 
 describe("add to cart test",function() {
     this.timeout(20000); // Set a longer timeout
@@ -7,7 +8,13 @@ describe("add to cart test",function() {
     let driver;
 
     beforeEach(async function() {
-        driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+        // Specify the path to the Firefox binary
+        const firefoxOptions = new Options().setBinary('/usr/bin/firefox');
+
+        driver = await new Builder()
+            .forBrowser(Browser.FIREFOX)
+            .setFirefoxOptions(firefoxOptions)
+            .build();
     });
 
     afterEach(async function() {
