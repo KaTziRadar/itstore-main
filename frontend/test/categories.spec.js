@@ -9,10 +9,14 @@ describe("product categories test",function() {
     let driver;
 
     beforeEach(async function() {
+        // Create Chrome options for headless mode
+        const options = new chrome.Options();
+        options.headless(); // Set headless mode
         driver = await new Builder().forBrowser(Browser.CHROME)
-            .setChromeOptions(new chrome.Options().headless()) // Set Chrome options for headless mode
+            .setChromeOptions(options)
             .build();
     });
+
 
     afterEach(async function() {
         if (driver) {

@@ -24,6 +24,19 @@ jobs:
       with:
         node-version: '14'
 
+
+    - name: Install Chrome and chromedriver
+      run: |
+          sudo apt-get update
+          sudo apt-get install -y wget
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo dpkg -i google-chrome-stable_current_amd64.deb
+          sudo apt-get install -f
+          wget https://chromedriver.storage.googleapis.com/94.0.4606.61/chromedriver_linux64.zip
+          sudo unzip chromedriver_linux64.zip -d /usr/local/bin
+          rm chromedriver_linux64.zip
+          sudo chmod +x /usr/local/bin/chromedriver
+
     - name: Install Firefox and geckodriver
       run: |
         sudo apt-get update
