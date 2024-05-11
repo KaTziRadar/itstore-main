@@ -1,4 +1,4 @@
-const { Builder, By, Browser } = require('selenium-webdriver');
+const { Builder, By, Browser,Options, Capabilities } = require('selenium-webdriver');
 const assert = require('assert');
 
 describe("add product from categories test", function() {
@@ -7,7 +7,11 @@ describe("add product from categories test", function() {
     let driver;
 
     beforeEach(async function() {
-        driver = await new Builder().forBrowser(Browser.INTERNET_EXPLORER).build();
+        const chromeOptions = new Options();
+        chromeOptions.addArguments("--headless");
+        const chromeCapabilities = Capabilities.chrome().set('goog:chromeOptions', chromeOptions);
+
+        driver = await new Builder().forBrowser(Browser.CHROME).withCapabilities(chromeCapabilities).build();
     });
 
     afterEach(async function() {
