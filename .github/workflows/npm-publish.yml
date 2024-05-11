@@ -7,9 +7,6 @@ on:
       - develop
       - ci_test_new
 
- 
-           
-
 jobs:
   build:
     runs-on: ubuntu-latest  
@@ -27,8 +24,16 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Install Firefox
-      run: sudo apt-get update && sudo apt-get install -y firefox
+    - name: Install Firefox and geckodriver
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y firefox
+        sudo apt-get install -y wget
+        sudo apt-get install -y unzip
+        wget https://github.com/mozilla/geckodriver/releases/download/v0.30.0/geckodriver-v0.30.0-linux64.tar.gz
+        tar -xvzf geckodriver-v0.30.0-linux64.tar.gz
+        sudo mv geckodriver /usr/local/bin/
+        rm geckodriver-v0.30.0-linux64.tar.gz
 
     - name: Install dependencies and run Docker container
       run: |
