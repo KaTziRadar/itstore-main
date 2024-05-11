@@ -7,7 +7,7 @@ describe("decrease from cart test",function() {
     let driver;
 
     beforeEach(async function() {
-        driver = await new Builder().forBrowser(Browser.CHROME).build();
+        driver = await new Builder().forBrowser(Browser.SAFARI).build();
     });
 
     afterEach(async function() {
