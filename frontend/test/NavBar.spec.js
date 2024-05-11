@@ -7,7 +7,7 @@ describe("NavBar test", function() {
     let driver;
 
     beforeEach(async function() {
-        driver = await new Builder().forBrowser(Browser.CHROME).build();
+        driver = await new Builder().forBrowser(Browser.FIREFOX).build();
     });
 
     afterEach(async function() {
