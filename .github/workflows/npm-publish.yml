@@ -26,7 +26,7 @@ jobs:
 
     - name: Build Docker container
       run: |
-        cd frontend
+        pwd
         docker build -t katzir/ci-test .
 
     - name: Run Docker container
