@@ -19,5 +19,5 @@ steps:
     cd frontend
     pwd
     npm install
-    npm start 
+    npm run start 
   displayName: 'npm install and build'
