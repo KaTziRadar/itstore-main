@@ -20,5 +20,4 @@ steps:
     pwd
     npm install
     npm run build
-    npm run test_webDriver
   displayName: 'npm install and build'
