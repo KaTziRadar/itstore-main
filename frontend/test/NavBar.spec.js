@@ -2,8 +2,9 @@ const { Builder, By, until, Browser } = require('selenium-webdriver');
 const assert = require('assert');
 
 describe("NavBar test", function () {
-
+    this.timeout(100000);
     it("NavBar", async function () {
+
         let driver = await new Builder().forBrowser(Browser.CHROME).build();
 
         await driver.get('http://localhost:3000/');
@@ -30,7 +31,6 @@ describe("NavBar test", function () {
 
         const currentUrl = await driver.getCurrentUrl();
         assert.equal(currentUrl, 'http://localhost:3000/', 'Expected URL does not match actual URL');
-        sleep(20000);
         await driver.quit();
 
     });
