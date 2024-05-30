@@ -26,14 +26,14 @@ jobs:
       - name: Install Google Chrome
         run: sudo apt-get install -y google-chrome-stable
 
-      - name: Start the backend
-        run: npm --prefix ./backend/ start &
+      # - name: Start the backend
+      #   run: npm --prefix ./backend/ start &
 
-      - name: Start the frontend
-        run: npm --prefix ./frontend/ start &
+      # - name: Start the frontend
+      #   run: npm --prefix ./frontend/ start &
 
-      - name: Wait for servers to be ready
-        run: sleep 10
+      # - name: Wait for servers to be ready
+      #   run: sleep 10
 
       - name: Run all tests
         run: npm --prefix ./frontend/ run navbarTest
