@@ -7,7 +7,7 @@ describe("NavBar test", function () {
 
         let driver = await new Builder().forBrowser(Browser.CHROME).build();
 
-        await driver.get('http://localhost:3000/');
+        await driver.get('https://itstore-main-fe-omj2.onrender.com/');
         await driver.sleep(1000); // Add delay to observe page loading
 
         await driver.findElement(By.linkText('About')).click();
@@ -30,7 +30,7 @@ describe("NavBar test", function () {
         await driver.sleep(1000);
 
         const currentUrl = await driver.getCurrentUrl();
-        assert.equal(currentUrl, 'http://localhost:3000/', 'Expected URL does not match actual URL');
+        assert.equal(currentUrl, 'https://itstore-main-fe-omj2.onrender.com/', 'Expected URL does not match actual URL');
         await driver.quit();
 
     });
