@@ -8,7 +8,7 @@ describe("NavBar test", function () {
         let driver = await new Builder().forBrowser(Browser.FIREFOX).build();
 
         await driver.get('https://itstore-main-fe-omj2.onrender.com/');
-        await driver.sleep(1000); // Add delay to observe page loading
+        await driver.sleep(1000); // Add delay to observe page loading 
 
         await driver.findElement(By.linkText('About')).click();
         await driver.sleep(1000);
