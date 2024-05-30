@@ -16,7 +16,7 @@
     "react-scripts": "5.0.1",
     "react-use-cart": "^1.13.0",
     "selenium-server-standalone-jar": "^4.19.1",
-    "selenium-webdriver": "^4.19.0",
+    "selenium-webdriver": "^4.21.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
