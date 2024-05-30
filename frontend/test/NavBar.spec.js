@@ -1,22 +1,11 @@
 const { Builder, By, until, Browser } = require('selenium-webdriver');
 const assert = require('assert');
 
-describe("NavBar test", function() {
-    this.timeout(20000); // Set a longer timeout
+describe("NavBar test", function () {
 
-    let driver;
+    it("NavBar", async function () {
+        let driver = await new Builder().forBrowser(Browser.CHROME).build();
 
-    beforeEach(async function() {
-        driver = await new Builder().forBrowser(Browser.CHROME).build();
-    });
-
-    afterEach(async function() {
-        if (driver) {
-            await driver.quit();
-        }
-    });
-
-    it("NavBar", async function() {
         await driver.get('http://localhost:3000/');
         await driver.sleep(1000); // Add delay to observe page loading
 
@@ -42,7 +31,7 @@ describe("NavBar test", function() {
         const currentUrl = await driver.getCurrentUrl();
         assert.equal(currentUrl, 'http://localhost:3000/', 'Expected URL does not match actual URL');
 
-
+        await driver.quit();
 
     });
 
