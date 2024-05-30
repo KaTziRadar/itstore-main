@@ -1,26 +1,39 @@
-name: Node.js Package
-
 on:
   push:
     branches:
-      - develop
+      - release
 
 jobs:
-  build:
+  npm_install_and_run_tests:
+    name: Install dependencies and run tests
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - run: npm --prefix ./backend/ install
-      - run: npm --prefix ./frontend/ install
 
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - run: npm --prefix ./backend/ install
-      - run: npm --prefix ./frontend/ install
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+
+    - name: Install backend dependencies
+      run: npm --prefix ./backend/ install
+
+    - name: Install frontend dependencies
+      run: npm --prefix ./frontend/ install
+
+    - name: Install Google Chrome
+      run: sudo apt-get install -y google-chrome-stable
+
+    - name: Start the backend
+      run: npm --prefix ./backend/ start
+
+    - name: Start the frontend
+      run: npm --prefix ./frontend/ start
+
+    - name: Wait for servers to be ready
+      run: sleep 10 
+      
+    - name: Run all tests
+      run: npm --prefix ./frontend/ test_webDriver
