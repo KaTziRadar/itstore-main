@@ -4,7 +4,8 @@ const assert = require('assert');
 describe("NavBar test", function () {
     this.timeout(100000);
     it("NavBar", async function () {
-        let driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+
+        let driver = await new Builder().forBrowser(Browser.CHROME).build();
 
         await driver.get('https://itstore-main-fe-omj2.onrender.com/');
         await driver.sleep(1000); // Add delay to observe page loading

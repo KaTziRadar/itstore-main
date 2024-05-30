@@ -23,8 +23,8 @@ jobs:
       - name: Install frontend dependencies
         run: npm --prefix ./frontend/ install
 
-      # - name: Install Google Chrome
-      #   run: sudo apt-get install -y google-chrome-stable
+      - name: Install Google Chrome
+        run: sudo apt-get install -y google-chrome-stable
 
       # - name: Start the backend
       #   run: npm --prefix ./backend/ start &
