@@ -36,4 +36,4 @@ jobs:
       run: sleep 10 
       
     - name: Run all tests
-      run: npm --prefix ./frontend/ test_webDriver
+      run: npm --prefix ./frontend/ run test_webDriver
