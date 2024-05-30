@@ -1,20 +1,11 @@
-const {Builder} = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
-
-let options = new chrome.Options();
-options.setChromeBinaryPath('/path/to/google-chrome');
-
-let driver = new Builder()
-    .forBrowser('chrome')
-    .setChromeOptions(options)
-    .build();
+const { Builder, By, until, Browser } = require('selenium-webdriver');
+const assert = require('assert');
 
 describe("NavBar test", function () {
     this.timeout(100000);
     it("NavBar", async function () {
 
-        let options = new chrome.Options();
-        options.addArguments('headless');
+        let driver = await new Builder().forBrowser(Browser.CHROME).build();
 
         await driver.get('https://itstore-main-fe-omj2.onrender.com/');
         await driver.sleep(1000); // Add delay to observe page loading
