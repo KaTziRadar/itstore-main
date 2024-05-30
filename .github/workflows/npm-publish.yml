@@ -27,10 +27,10 @@ jobs:
       run: sudo apt-get install -y google-chrome-stable
 
     - name: Start the backend
-      run: npm --prefix ./backend/ start
+      run: npm --prefix ./backend/ start &
 
     - name: Start the frontend
-      run: npm --prefix ./frontend/ start
+      run: npm --prefix ./frontend/ start &
 
     - name: Wait for servers to be ready
       run: sleep 10 
