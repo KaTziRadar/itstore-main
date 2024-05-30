@@ -30,7 +30,7 @@ describe("NavBar test", function () {
 
         const currentUrl = await driver.getCurrentUrl();
         assert.equal(currentUrl, 'http://localhost:3000/', 'Expected URL does not match actual URL');
-
+        sleep(20000);
         await driver.quit();
 
     });
