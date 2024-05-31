@@ -55,14 +55,15 @@ describe("Login Error test", function() {
         this.timeout(5000);
         await driver.get("https://itstore-main-fe-omj2.onrender.com/");
         await driver.findElement(By.linkText('Login')).click();
+
         await driver.findElement(By.id('email')).sendKeys('a@gmail.com');
         await driver.findElement(By.id('password')).sendKeys('asd');
         await driver.findElement(By.css('.btn')).click();
         await driver.sleep(1000);
 
-        const errorMsg = await driver.findElement(By.id('message'));
-        const msgValue = await errorMsg.getText();
+        const erorMsg = await driver.findElement((By.id('message')));
+        const msgValue = await erorMsg.getText();
         
-        assert.strictEqual(msgValue, "Password is incorrect", 'Expected Error does not match actual Error');
+        assert.equal(msgValue, "Password is incorrect", 'Expected Eror does not match actual Eror');
     });
 });
