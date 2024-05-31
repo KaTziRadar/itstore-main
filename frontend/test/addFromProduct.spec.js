@@ -26,7 +26,7 @@ describe("Add product from categories test", function() {
     });
 
     it("should add a product from categories", async function() {
-        await driver.get('http://localhost:3000/');
+        await driver.get('https://itstore-main-fe-omj2.onrender.com/');
         
         // Wait for the page to load and the element to be present
         await driver.wait(until.elementLocated(By.linkText('Product')), 10000);
