@@ -10,21 +10,11 @@ describe("add product from categories test", function() {
     options.addArguments('--no-sandbox'); // Needed if running as root
     options.addArguments('--disable-dev-shm-usage'); // Overcome limited resource problems
 
-    let driver  
+    let driver = new Builder()
+    .forBrowser('chrome')
+    .setChromeOptions(options)
+    .build();
 
-    beforeEach(async function() {
-         driver = new Builder()
-.forBrowser('chrome')
-.setChromeOptions(options)
-.build();
-
-    });
-
-    afterEach(async function() {
-        if (driver) {
-            await driver.quit();
-        }
-    });
 
     it("add product from categories test", async function() {
         await driver.get('http://localhost:3000/');
@@ -43,6 +33,8 @@ describe("add product from categories test", function() {
 
         const finalCartCount = await cartIcon.getText();
         assert.strictEqual(parseInt(finalCartCount), parseInt(initialCartCount) + 1, 'Item was not added to cart successfully');
+        await driver.quit();
+
 
     });
 });
