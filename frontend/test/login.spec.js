@@ -1,13 +1,24 @@
 const assert = require('assert');
 const { Builder, By, until } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 
 describe("Login test", function() {
-    this.timeout(20000);
-    it("should login successfully", async function() { 
-        let driver = await new Builder().forBrowser('chrome').build();
+    this.timeout(30000); // Set a longer timeout
 
+    it("should login successfully", async function() { 
+        let driver;
         try {
-            await driver.get("http://localhost:3000/");
+            let options = new chrome.Options();
+            options.addArguments('--headless'); // Run in headless mode
+            options.addArguments('--no-sandbox'); // Needed if running as root
+            options.addArguments('--disable-dev-shm-usage'); // Overcome limited resource problems
+
+            driver = await new Builder()
+                .forBrowser('chrome')
+                .setChromeOptions(options)
+                .build();
+
+            await driver.get("https://itstore-main-fe-omj2.onrender.com/");
             await driver.findElement(By.linkText('Login')).click();
             let pageURL = await driver.getCurrentUrl();
             console.log("URL_Page he:", pageURL);
@@ -25,12 +36,14 @@ describe("Login test", function() {
             console.log('Handled unexpected alert: "Login successfully!"');
 
             // Wait for the URL to change
-            await driver.wait(until.urlIs('http://localhost:3000/'), 2000);
+            await driver.wait(until.urlIs('https://itstore-main-fe-omj2.onrender.com/'), 2000);
 
             const currentUrl = await driver.getCurrentUrl();
-            assert.equal(currentUrl, 'http://localhost:3000/', 'Expected URL does not match actual URL');
+            assert.strictEqual(currentUrl, 'https://itstore-main-fe-omj2.onrender.com/', 'Expected URL does not match actual URL');
         } finally {
-            await driver.quit();
+            if (driver) {
+                await driver.quit();
+            }
         }
     });
 });
