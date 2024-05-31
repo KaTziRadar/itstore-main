@@ -10,13 +10,14 @@ describe("add product from categories test", function() {
     options.addArguments('--no-sandbox'); // Needed if running as root
     options.addArguments('--disable-dev-shm-usage'); // Overcome limited resource problems
 
-let driver = new Builder()
+    let driver  
+
+    beforeEach(async function() {
+         driver = new Builder()
 .forBrowser('chrome')
 .setChromeOptions(options)
 .build();
 
-    beforeEach(async function() {
-        driver = await new Builder().forBrowser(Browser.CHROME).build();
     });
 
     afterEach(async function() {

@@ -26,10 +26,6 @@ jobs:
       - name: Install Google Chrome
         run: sudo apt-get install -y google-chrome-stable
 
-      - name: Install Selenium
-        run: npm --prefix ./frontend/ install selenium-webdriver
-
-
       # - name: Start the backend
       #   run: npm --prefix ./backend/ start &
 
