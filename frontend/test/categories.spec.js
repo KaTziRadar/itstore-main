@@ -50,8 +50,15 @@ describe("Product categories test", function() {
         await driver.findElement(By.id("graphics card")).click();
         await driver.sleep(2000);
 
+
+
+
         const currentCategorie = await driver.findElement(By.id('currentCategorie'));
         const initialCategorie = await currentCategorie.getText();
-        assert.strictEqual(initialCategorie, "graphics card", 'Expected category does not match actual category');
+        assert.equal(initialCategorie, "graphics card", 'Expected Categorie does not match actual categorie');
+
+
+
     });
+
 });

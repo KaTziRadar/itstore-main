@@ -29,7 +29,7 @@ describe("Add to cart test", function() {
         await driver.get('https://itstore-main-fe-omj2.onrender.com/');
         await driver.sleep(1000); // Add delay to observe page loading
 
-        const productLink = await driver.wait(until.elementLocated(By.linkText('Product')), 10000);
+        const productLink = await driver.wait(until.elementLocated(By.linkText('Product')));
         await productLink.click();
 
         await driver.sleep(1000); // Add delay to observe navigation to product page
@@ -39,8 +39,6 @@ describe("Add to cart test", function() {
 
         const addToCartButton = await driver.wait(until.elementLocated(By.className('bg-sky-400 text-sky-50 hover:bg-sky-50 hover:text-sky-400 duration-300 border border-sky-400 px-2 py-1 rounded-md')), 10000);
         await addToCartButton.click();
-
-        await driver.sleep(1500); // Add delay to ensure cart count is updated
 
         const finalCartCount = await cartIcon.getText();
         assert.strictEqual(parseInt(finalCartCount), parseInt(initialCartCount) + 1, 'Item was not added to cart successfully');
