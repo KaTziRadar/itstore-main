@@ -1,11 +1,23 @@
 const { Builder, By, until, Browser } = require('selenium-webdriver');
 const assert = require('assert');
+const chrome = require('selenium-webdriver/chrome');
+
+
 
 describe("NavBar test", function () {
     this.timeout(100000);
     it("NavBar", async function () {
 
-        let driver = await new Builder().forBrowser(Browser.CHROME).build();
+        let options = new chrome.Options();
+        options.addArguments('--headless'); // Run in headless mode
+        options.addArguments('--no-sandbox'); // Needed if running as root
+        options.addArguments('--disable-dev-shm-usage'); // Overcome limited resource problems
+
+    let driver = new Builder()
+    .forBrowser('chrome')
+    .setChromeOptions(options)
+    .build();
+
 
         await driver.get('https://itstore-main-fe-omj2.onrender.com/');
         await driver.sleep(1000); // Add delay to observe page loading
