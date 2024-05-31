@@ -41,3 +41,6 @@ jobs:
 
       - name: Run all tests
         run: npm --prefix ./frontend/ run navbarTest
+
+      - name: Run all tests
+        run: npm --prefix ./frontend/ run test_webDriver

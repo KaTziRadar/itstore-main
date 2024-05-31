@@ -1,10 +1,19 @@
 const { Builder, By, Browser } = require('selenium-webdriver');
 const assert = require('assert');
+const chrome = require('selenium-webdriver/chrome');
 
 describe("add product from categories test", function() {
     this.timeout(10000); // Set a longer timeout
+  
+    let options = new chrome.Options();
+    options.addArguments('--headless'); // Run in headless mode
+    options.addArguments('--no-sandbox'); // Needed if running as root
+    options.addArguments('--disable-dev-shm-usage'); // Overcome limited resource problems
 
-    let driver;
+let driver = new Builder()
+.forBrowser('chrome')
+.setChromeOptions(options)
+.build();
 
     beforeEach(async function() {
         driver = await new Builder().forBrowser(Browser.CHROME).build();
