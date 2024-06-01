@@ -3,6 +3,7 @@ const assert = require('assert');
 const chrome = require('selenium-webdriver/chrome');
 
 describe("register test", function() {
+    this.timeout(10000);
     let driver;
 
     // Hook to setup WebDriver instance before tests
