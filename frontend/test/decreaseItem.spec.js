@@ -29,26 +29,25 @@ describe("Decrease from cart test", function() {
         await driver.get('https://itstore-main-fe-omj2.onrender.com/');
         await driver.sleep(1000); // Add delay to observe page loading
 
-        const productLink = await driver.wait(until.elementLocated(By.linkText('Product')), 10000);
+        const productLink = await driver.wait(until.elementLocated(By.linkText('Product')));
         await productLink.click();
-
         const addToCartButton = await driver.wait(until.elementLocated(By.className('bg-sky-400 text-sky-50 hover:bg-sky-50 hover:text-sky-400 duration-300 border border-sky-400 px-2 py-1 rounded-md')), 5000);
         await addToCartButton.click();
 
-        const cartLink = await driver.wait(until.elementLocated(By.className('cart')), 10000);
+
+        const cartLink = await driver.wait(until.elementLocated(By.className('cart')));
         await cartLink.click();
 
-        await driver.sleep(1000); // Add delay to observe navigation to cart page
+        await driver.sleep(1000); // Add delay to observe navigation to product page
 
         const cartIcon = await driver.findElement(By.className('cart'));
         const initialCartCount = await cartIcon.getText();
 
-        const decreaseButton = await driver.wait(until.elementLocated(By.className('decrease')), 10000);
-        await decreaseButton.click();
-
-        await driver.sleep(1000); // Add delay to ensure cart count is updated
-
+        const decreaseoButton = await driver.wait(until.elementLocated(By.className('decrease')), 10000);
+        await decreaseoButton.click();
+        
         const finalCartCount = await cartIcon.getText();
-        assert.strictEqual(parseInt(finalCartCount), parseInt(initialCartCount) - 1, 'Item was not removed from cart successfully');
+        assert.strictEqual(parseInt(finalCartCount), parseInt(initialCartCount) - 1, 'Item was not remove from cart successfully');
+    });
     });
 });

@@ -28,7 +28,7 @@ describe("Add to cart test", function() {
     it("should add item to cart", async function() {
         await driver.get('https://itstore-main-fe-omj2.onrender.com/');
         await driver.sleep(1000); // Add delay to observe page loading
-
+        
         const productLink = await driver.wait(until.elementLocated(By.linkText('Product')));
         await productLink.click();
 
