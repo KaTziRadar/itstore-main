@@ -69,7 +69,7 @@ describe("Delete user test", function() {
 
             assert.equal(msg, 'User deleted successfully!', 'Expected error does not match actual error');
             done(); // Call 'done()' to indicate test completion
-        })();
+        })().catch(done); // Catch any errors and call 'done()' to indicate test completion
     });
 
 });
