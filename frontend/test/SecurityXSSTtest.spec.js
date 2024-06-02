@@ -1,4 +1,5 @@
-const { Builder, By } = require('selenium-webdriver');
+const { Builder, By, Capabilities } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 const assert = require('assert');
 
 describe('Security Testing with Selenium Grid', function () {
@@ -6,9 +7,18 @@ describe('Security Testing with Selenium Grid', function () {
   let driver;
 
   before(async function () {
+    let chromeOptions = new chrome.Options();
+    chromeOptions.addArguments('--headless');
+    chromeOptions.addArguments('--disable-gpu');
+    chromeOptions.addArguments('--no-sandbox');
+    chromeOptions.addArguments('--disable-dev-shm-usage');
+
+    let chromeCapabilities = Capabilities.chrome();
+    chromeCapabilities.set('chromeOptions', chromeOptions);
+
     driver = await new Builder()
       .usingServer('http://localhost:4444/wd/hub')
-      .forBrowser('chrome')
+      .withCapabilities(chromeCapabilities)
       .build();
   });
 
@@ -17,7 +27,7 @@ describe('Security Testing with Selenium Grid', function () {
   });
 
   it('Test for XSS vulnerability', async function () {
-    await driver.get('http://localhost:3000/Login'); 
+    await driver.get('https://itstore-main-fe-omj2.onrender.com/Login'); 
     await driver.findElement(By.id('email')).sendKeys('<script>alert("XSS Attack!")</script>');
     await driver.findElement(By.id('password')).sendKeys('asd');
 
