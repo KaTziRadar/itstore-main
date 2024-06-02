@@ -57,7 +57,7 @@ describe("Login Error test", function () {
         await driver.findElement(By.linkText('Login')).click();
 
         await driver.findElement(By.id('email')).sendKeys('a@gmail.com');
-        await driver.findElement(By.id('password')).sendKeys('test123');
+        await driver.findElement(By.id('password')).sendKeys('asd');
         await driver.findElement(By.css('.btn')).click();
         await driver.sleep(1000);
 
