@@ -48,6 +48,6 @@ describe("Decrease from cart test", function() {
         
         const finalCartCount = await cartIcon.getText();
         assert.strictEqual(parseInt(finalCartCount), parseInt(initialCartCount) - 1, 'Item was not remove from cart successfully');
-    });
+
     });
 });
