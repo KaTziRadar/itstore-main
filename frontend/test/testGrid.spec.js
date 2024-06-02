@@ -3,11 +3,11 @@ const { Builder, By, Key, until } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 const assert = require('assert');
 
-describe('00_Navbar', function() {
+describe('00_Navbar', function () {
   let driver;
   let vars;
 
-  beforeEach(async function() {
+  beforeEach(async function () {
     const chromeOptions = new chrome.Options();
     chromeOptions.addArguments('--headless');
     chromeOptions.addArguments('--disable-gpu');
@@ -23,14 +23,14 @@ describe('00_Navbar', function() {
     vars = {};
   });
 
-  afterEach(async function() {
+  afterEach(async function () {
     if (driver) {
       await driver.quit();
     }
   });
 
-  it('00_NavbarGRID', async function() {
-    this.timeout(700000); // Set specific timeout for this test
+  it('00_NavbarGRID', async function () {
+    this.timeout(700000); // Set specific timeout for this test 
 
     await driver.get('https://itstore-main-fe-omj2.onrender.com/');
     vars["userID"] = await driver.executeScript("return localStorage.getItem(\"userID\")");
