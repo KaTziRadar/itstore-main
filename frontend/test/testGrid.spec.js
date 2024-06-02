@@ -4,7 +4,6 @@ const chrome = require('selenium-webdriver/chrome');
 const assert = require('assert');
 
 describe('00_Navbar', function() {
-  this.timeout(700000); // Set specific timeout for the entire test suite
   let driver;
   let vars;
 
@@ -31,10 +30,12 @@ describe('00_Navbar', function() {
   });
 
   beforeEach(async function() {
-    this.timeout(100000); // Set specific timeout for each test
+    this.timeout(10000); // Set specific timeout for each test
   });
 
   it('00_NavbarGRID', async function() {
+    this.timeout(700000); // Set specific timeout for this test
+
     await driver.get('https://itstore-main-fe-omj2.onrender.com/');
     vars["userID"] = await driver.executeScript("return localStorage.getItem(\"userID\")");
     if (!!vars["userID"]) {
