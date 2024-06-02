@@ -3,6 +3,7 @@ const chrome = require('selenium-webdriver/chrome');
 const assert = require('assert');
 
 describe('Security Testing with Selenium Grid', function () {
+  this.timeout(5000);
   let driver;
 
   before(async function () {

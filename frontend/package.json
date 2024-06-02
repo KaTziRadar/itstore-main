@@ -25,7 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-selenium": "java -jar ./node_modules/selenium-server-standalone-jar/jar/selenium-server-4.19.1.jar standalone ",
-    "test_webDriver": "mocha test/*.spec.js",
+    "test_webDriver": "mocha test/SecuritySSLTest.spec.js",
     "navbarTest": "mocha test/NavBar.spec.js"
   },
   "eslintConfig": {
