@@ -26,12 +26,12 @@ describe('Security Testing with Selenium Grid XSST', function () {
   });
 
   it('Test for XSS vulnerability', async function () {
-    await driver.get('https://itstore-main-fe-omj2.onrender.com/Login'); 
+    await driver.get('https://itstore-main-fe-omj2.onrender.com/Login');
     await driver.findElement(By.id('email')).sendKeys('<script>alert("XSS Attack!")</script>');
-    await driver.findElement(By.id('password')).sendKeys('asd');
+    await driver.findElement(By.id('password')).sendKeys('test123');
 
     await driver.findElement(By.css('.btn')).click();
-    await driver.sleep(2000); 
+    await driver.sleep(2000);
 
     let errorMessage = await driver.findElement(By.id('message')).getText();
     assert(errorMessage.includes('Error! email is invalid'), 'Error message not displayed');

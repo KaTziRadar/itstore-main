@@ -2,10 +2,10 @@ const assert = require('assert');
 const { Builder, By, until } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 
-describe("Login test", function() {
+describe("Login test", function () {
     this.timeout(30000); // Set a longer timeout
 
-    it("should login successfully", async function() { 
+    it("should login successfully", async function () {
         let driver;
         try {
             let options = new chrome.Options();
@@ -23,8 +23,8 @@ describe("Login test", function() {
             let pageURL = await driver.getCurrentUrl();
             console.log("URL_Page he:", pageURL);
 
-            await driver.findElement(By.id('email')).sendKeys('asd@asd.asd');
-            await driver.findElement(By.id('password')).sendKeys('asd');
+            await driver.findElement(By.id('email')).sendKeys('test@test.test');
+            await driver.findElement(By.id('password')).sendKeys('test123');
             await driver.findElement(By.css('.btn')).click();
 
             // Wait for the alert to appear
