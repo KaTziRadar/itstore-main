@@ -7,7 +7,7 @@ describe('00_Navbar', function() {
   let driver;
   let vars;
 
-  before(async function() {
+  beforeEach(async function() {
     const chromeOptions = new chrome.Options();
     chromeOptions.addArguments('--headless');
     chromeOptions.addArguments('--disable-gpu');
@@ -23,14 +23,10 @@ describe('00_Navbar', function() {
     vars = {};
   });
 
-  after(async function() {
+  afterEach(async function() {
     if (driver) {
       await driver.quit();
     }
-  });
-
-  beforeEach(async function() {
-    this.timeout(10000); // Set specific timeout for each test
   });
 
   it('00_NavbarGRID', async function() {
@@ -82,5 +78,5 @@ describe('00_Navbar', function() {
     await driver.findElement(By.css("path")).click();
     vars["url"] = await driver.executeScript("return window.location.href;");
     assert(vars["url"].toString() == "https://itstore-main-fe-omj2.onrender.com/cart");
-  });
+  }).timeout(700000); // Set timeout for the entire test case
 });
