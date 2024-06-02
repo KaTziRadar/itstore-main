@@ -21,9 +21,7 @@ describe('Load test with Selenium Grid', function () {
   });
 
   afterEach(async function () {
-    await Promise.all(driver.map(async (driver) => {
       await driver.quit();
-    }));
   });
 
   it('Site load test', async function () {
