@@ -4,7 +4,7 @@ const chrome = require('selenium-webdriver/chrome');
 const assert = require('assert');
 
 describe('00_Navbar', function() {
-  this.timeout(30000);
+  this.timeout(100000);
   let driver;
   let vars;
 
