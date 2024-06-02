@@ -18,8 +18,6 @@ describe('Security Testing with Selenium Grid SSLT', function () {
       .setChromeOptions(chromeOptions)
       .usingServer('http://localhost:4444/wd/hub')
       .build();
-
-    vars = {};
   });
 
   after(async function () {

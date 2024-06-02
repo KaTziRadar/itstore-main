@@ -1,26 +1,25 @@
-const { Builder, By, Capabilities } = require('selenium-webdriver');
+const { Builder, By } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 const assert = require('assert');
 
-describe('Security Testing with Selenium Grid', function () {
+describe('Security Testing with Selenium Grid XSST', function () {
   this.timeout(5000);
   let driver;
 
-  before(async function () {
-    let chromeOptions = new chrome.Options();
+  beforeEach(async function () {
+    const chromeOptions = new chrome.Options();
     chromeOptions.addArguments('--headless');
     chromeOptions.addArguments('--disable-gpu');
     chromeOptions.addArguments('--no-sandbox');
     chromeOptions.addArguments('--disable-dev-shm-usage');
 
-    let chromeCapabilities = Capabilities.chrome();
-    chromeCapabilities.set('chromeOptions', chromeOptions);
-
     driver = await new Builder()
+      .forBrowser('chrome')
+      .setChromeOptions(chromeOptions)
       .usingServer('http://localhost:4444/wd/hub')
-      .withCapabilities(chromeCapabilities)
       .build();
   });
+
 
   after(async function () {
     await driver.quit();
