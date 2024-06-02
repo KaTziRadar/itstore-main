@@ -4,10 +4,11 @@ const chrome = require('selenium-webdriver/chrome');
 const assert = require('assert');
 
 describe('00_Navbar', function() {
+  this.timeout(700000); // Set specific timeout for the entire test suite
   let driver;
   let vars;
 
-  beforeEach(async function() {
+  before(async function() {
     const chromeOptions = new chrome.Options();
     chromeOptions.addArguments('--headless');
     chromeOptions.addArguments('--disable-gpu');
@@ -23,15 +24,17 @@ describe('00_Navbar', function() {
     vars = {};
   });
 
-  afterEach(async function() {
+  after(async function() {
     if (driver) {
       await driver.quit();
     }
   });
 
-  it('00_NavbarGRID', async function() {
-    this.timeout(700000); // Set specific timeout for this test
+  beforeEach(async function() {
+    this.timeout(100000); // Set specific timeout for each test
+  });
 
+  it('00_NavbarGRID', async function() {
     await driver.get('https://itstore-main-fe-omj2.onrender.com/');
     vars["userID"] = await driver.executeScript("return localStorage.getItem(\"userID\")");
     if (!!vars["userID"]) {
@@ -78,5 +81,5 @@ describe('00_Navbar', function() {
     await driver.findElement(By.css("path")).click();
     vars["url"] = await driver.executeScript("return window.location.href;");
     assert(vars["url"].toString() == "https://itstore-main-fe-omj2.onrender.com/cart");
-  }).timeout(700000); // Set timeout for the entire test case
+  });
 });
