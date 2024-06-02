@@ -29,7 +29,7 @@ describe('Load test with Selenium Grid', function () {
   it('Site load test', async function () {
     for (let i = 0; i < 5; i++) { // Testing with 5 browser managers
       await drivers[0].get('https://itstore-main-fe-omj2.onrender.com/');
-      let title = await drivers[i].getTitle();
+      let title = await driver.getTitle();
       assert(title.includes('IT store')); // Should throw an error if the header doesn't match
     }
   });
