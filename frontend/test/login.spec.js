@@ -23,8 +23,8 @@ describe("Login test", function () {
             let pageURL = await driver.getCurrentUrl();
             console.log("URL_Page he:", pageURL);
 
-            await driver.findElement(By.id('email')).sendKeys('test@test.test');
-            await driver.findElement(By.id('password')).sendKeys('test123');
+            await driver.findElement(By.id('email')).sendKeys('asd@asd.asd');
+            await driver.findElement(By.id('password')).sendKeys('asd');
             await driver.findElement(By.css('.btn')).click();
 
             // Wait for the alert to appear
