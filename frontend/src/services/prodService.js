@@ -1,5 +1,5 @@
 import axios from 'axios';
-const backendURL = 'https://itstore-main.onrender.com' //'http://localhost:3001';
+const backendURL = 'https://itstore-main.onrender.com';
 
 async function addProducts(data) {
     try {

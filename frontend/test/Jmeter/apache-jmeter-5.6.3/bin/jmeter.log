@@ -1,0 +1,278 @@
+2024-06-02 13:56:34,617 INFO o.a.j.u.JMeterUtils: Setting Locale to en_GB
+2024-06-02 13:56:34,634 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2024-06-02 13:56:34,635 INFO o.a.j.JMeter: Loading system properties from: system.properties
+2024-06-02 13:56:34,640 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2024-06-02 13:56:34,640 INFO o.a.j.JMeter: Version 5.6.3
+2024-06-02 13:56:34,640 INFO o.a.j.JMeter: java.version=15.0.2
+2024-06-02 13:56:34,640 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2024-06-02 13:56:34,640 INFO o.a.j.JMeter: os.name=Windows 10
+2024-06-02 13:56:34,640 INFO o.a.j.JMeter: os.arch=amd64
+2024-06-02 13:56:34,640 INFO o.a.j.JMeter: os.version=10.0
+2024-06-02 13:56:34,640 INFO o.a.j.JMeter: file.encoding=Cp1255
+2024-06-02 13:56:34,640 INFO o.a.j.JMeter: java.awt.headless=null
+2024-06-02 13:56:34,640 INFO o.a.j.JMeter: Max memory     =4282384384
+2024-06-02 13:56:34,640 INFO o.a.j.JMeter: Available Processors =12
+2024-06-02 13:56:34,645 INFO o.a.j.JMeter: Default Locale=English (United Kingdom)
+2024-06-02 13:56:34,645 INFO o.a.j.JMeter: JMeter  Locale=English (United Kingdom)
+2024-06-02 13:56:34,646 INFO o.a.j.JMeter: JMeterHome=C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3
+2024-06-02 13:56:34,646 INFO o.a.j.JMeter: user.dir  =C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\bin
+2024-06-02 13:56:34,646 INFO o.a.j.JMeter: PWD       =C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\bin
+2024-06-02 13:56:34,648 INFO o.a.j.JMeter: IP: 192.168.178.30 Name: Tomer-PC FullName: Tomer-PC.fritz.box
+2024-06-02 13:56:34,661 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2024-06-02 13:56:34,782 INFO o.a.j.JMeterGuiLauncher: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2024-06-02 13:56:35,567 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-06-02 13:56:35,635 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-webdriver-4.13.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.action.Command], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-06-02 13:56:35,693 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-06-02 13:56:35,696 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-webdriver-4.13.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.gui.plugin.MenuCreator], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-06-02 13:56:35,799 INFO o.j.r.JARSourceHTTP: Requesting https://jmeter-plugins.org/repo/?installID=windows_10-9518f6c34aad434c4af942ddf4adb96c-gui
+2024-06-02 13:56:37,641 INFO o.j.r.PluginManager: Plugins Status: [jpgc-plugins-manager=1.10, jpgc-webdriver=4.13.0.0, jmeter-core=5.6.3, jmeter-ftp=5.6.3, jmeter-http=5.6.3, jmeter-jdbc=5.6.3, jmeter-jms=5.6.3, jmeter-junit=5.6.3, jmeter-java=5.6.3, jmeter-ldap=5.6.3, jmeter-mail=5.6.3, jmeter-mongodb=5.6.3, jmeter-native=5.6.3, jmeter-tcp=5.6.3, jmeter-components=5.6.3]
+2024-06-02 13:58:12,556 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2024-06-02 13:58:12,557 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2024-06-02 13:58:12,557 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2024-06-02 13:58:12,557 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2024-06-02 14:00:13,515 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-06-02 14:00:13,518 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-webdriver-4.13.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.ResultRenderer], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-06-02 14:00:13,531 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-06-02 14:00:13,534 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-webdriver-4.13.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.visualizers.RequestView], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-06-02 14:25:57,138 INFO o.a.j.s.FileServer: Default base='C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\bin'
+2024-06-02 14:25:57,138 INFO o.a.j.s.FileServer: Set new base='C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter'
+2024-06-02 14:25:57,238 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2024-06-02 14:25:57,243 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2024-06-02 14:25:57,244 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2024-06-02 14:26:12,216 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-06-02 14:26:12,217 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-06-02 14:26:12,217 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-06-02 14:26:12,218 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2024-06-02 14:26:12,218 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2024-06-02 14:26:12,246 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-06-02 14:26:12,249 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\tomer\Documents\GitHub\itstore-main\frontend\test\Jmeter\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-webdriver-4.13.0.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2024-06-02 14:26:12,252 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-06-02 14:26:12,281 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-06-02 14:26:12,282 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-06-02 14:26:12,282 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-06-02 14:26:12,282 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-06-02 14:26:12,285 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-06-02 14:26:12,285 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-06-02 14:26:12,286 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-06-02 14:26:15,570 ERROR o.a.j.s.SampleResult: sampleStart called twice
+java.lang.Throwable: Invalid call sequence
+	at org.apache.jmeter.samplers.SampleResult.sampleStart(SampleResult.java:1186) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.samplers.SampleResult$sampleStart.call(Unknown Source) [ApacheJMeter_core.jar:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) [groovy-3.0.20.jar:3.0.20]
+	at Script1.run(Script1.groovy:8) [script:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:155) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264) [java.scripting:?]
+	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:101) [jmeter-plugins-webdriver-4.13.0.0.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2024-06-02 14:26:20,580 ERROR o.a.j.s.SampleResult: sampleEnd called twice
+java.lang.Throwable: Invalid call sequence
+	at org.apache.jmeter.samplers.SampleResult.sampleEnd(SampleResult.java:1198) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.samplers.SampleResult$sampleEnd$0.call(Unknown Source) [ApacheJMeter_core.jar:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) [groovy-3.0.20.jar:3.0.20]
+	at Script1.run(Script1.groovy:10) [script:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:155) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264) [java.scripting:?]
+	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:101) [jmeter-plugins-webdriver-4.13.0.0.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2024-06-02 14:26:20,601 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-06-02 14:26:20,601 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-06-02 14:26:21,196 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-06-02 14:26:21,196 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2024-06-02 14:38:31,187 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2024-06-02 14:38:31,187 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2024-06-02 14:38:31,188 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2024-06-02 14:38:31,188 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group
+2024-06-02 14:38:31,188 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Thread Group.
+2024-06-02 14:38:31,188 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2024-06-02 14:38:31,189 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2024-06-02 14:38:31,191 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2024-06-02 14:38:31,191 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2024-06-02 14:38:31,192 INFO o.a.j.t.JMeterThread: Thread started: Thread Group 1-1
+2024-06-02 14:38:32,769 ERROR o.a.j.s.SampleResult: sampleStart called twice
+java.lang.Throwable: Invalid call sequence
+	at org.apache.jmeter.samplers.SampleResult.sampleStart(SampleResult.java:1186) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.samplers.SampleResult$sampleStart.call(Unknown Source) [ApacheJMeter_core.jar:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) [groovy-3.0.20.jar:3.0.20]
+	at Script2.run(Script2.groovy:8) [script:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:155) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264) [java.scripting:?]
+	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:101) [jmeter-plugins-webdriver-4.13.0.0.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2024-06-02 14:38:37,782 ERROR o.a.j.s.SampleResult: sampleEnd called twice
+java.lang.Throwable: Invalid call sequence
+	at org.apache.jmeter.samplers.SampleResult.sampleEnd(SampleResult.java:1198) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.samplers.SampleResult$sampleEnd$0.call(Unknown Source) [ApacheJMeter_core.jar:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) [groovy-3.0.20.jar:3.0.20]
+	at Script2.run(Script2.groovy:10) [script:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:155) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264) [java.scripting:?]
+	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:101) [jmeter-plugins-webdriver-4.13.0.0.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2024-06-02 14:38:38,355 ERROR o.a.j.s.SampleResult: sampleStart called twice
+java.lang.Throwable: Invalid call sequence
+	at org.apache.jmeter.samplers.SampleResult.sampleStart(SampleResult.java:1186) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.samplers.SampleResult$sampleStart.call(Unknown Source) [ApacheJMeter_core.jar:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) [groovy-3.0.20.jar:3.0.20]
+	at Script2.run(Script2.groovy:15) [script:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:155) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264) [java.scripting:?]
+	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:101) [jmeter-plugins-webdriver-4.13.0.0.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2024-06-02 14:38:43,363 ERROR o.a.j.s.SampleResult: sampleEnd called twice
+java.lang.Throwable: Invalid call sequence
+	at org.apache.jmeter.samplers.SampleResult.sampleEnd(SampleResult.java:1198) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.samplers.SampleResult$sampleEnd$0.call(Unknown Source) [ApacheJMeter_core.jar:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) [groovy-3.0.20.jar:3.0.20]
+	at Script2.run(Script2.groovy:17) [script:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:155) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264) [java.scripting:?]
+	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:101) [jmeter-plugins-webdriver-4.13.0.0.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2024-06-02 14:38:43,905 ERROR o.a.j.s.SampleResult: sampleStart called twice
+java.lang.Throwable: Invalid call sequence
+	at org.apache.jmeter.samplers.SampleResult.sampleStart(SampleResult.java:1186) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.samplers.SampleResult$sampleStart.call(Unknown Source) [ApacheJMeter_core.jar:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) [groovy-3.0.20.jar:3.0.20]
+	at Script2.run(Script2.groovy:23) [script:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:155) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264) [java.scripting:?]
+	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:101) [jmeter-plugins-webdriver-4.13.0.0.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2024-06-02 14:38:48,906 ERROR o.a.j.s.SampleResult: sampleEnd called twice
+java.lang.Throwable: Invalid call sequence
+	at org.apache.jmeter.samplers.SampleResult.sampleEnd(SampleResult.java:1198) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.samplers.SampleResult$sampleEnd$0.call(Unknown Source) [ApacheJMeter_core.jar:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) [groovy-3.0.20.jar:3.0.20]
+	at Script2.run(Script2.groovy:25) [script:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:155) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264) [java.scripting:?]
+	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:101) [jmeter-plugins-webdriver-4.13.0.0.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2024-06-02 14:38:49,443 ERROR o.a.j.s.SampleResult: sampleStart called twice
+java.lang.Throwable: Invalid call sequence
+	at org.apache.jmeter.samplers.SampleResult.sampleStart(SampleResult.java:1186) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.samplers.SampleResult$sampleStart.call(Unknown Source) [ApacheJMeter_core.jar:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) [groovy-3.0.20.jar:3.0.20]
+	at Script2.run(Script2.groovy:31) [script:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:155) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264) [java.scripting:?]
+	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:101) [jmeter-plugins-webdriver-4.13.0.0.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2024-06-02 14:38:54,454 ERROR o.a.j.s.SampleResult: sampleEnd called twice
+java.lang.Throwable: Invalid call sequence
+	at org.apache.jmeter.samplers.SampleResult.sampleEnd(SampleResult.java:1198) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.samplers.SampleResult$sampleEnd$0.call(Unknown Source) [ApacheJMeter_core.jar:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) [groovy-3.0.20.jar:3.0.20]
+	at Script2.run(Script2.groovy:33) [script:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:155) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264) [java.scripting:?]
+	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:101) [jmeter-plugins-webdriver-4.13.0.0.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2024-06-02 14:38:54,990 ERROR o.a.j.s.SampleResult: sampleStart called twice
+java.lang.Throwable: Invalid call sequence
+	at org.apache.jmeter.samplers.SampleResult.sampleStart(SampleResult.java:1186) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.samplers.SampleResult$sampleStart.call(Unknown Source) [ApacheJMeter_core.jar:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) [groovy-3.0.20.jar:3.0.20]
+	at Script2.run(Script2.groovy:39) [script:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:155) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264) [java.scripting:?]
+	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:101) [jmeter-plugins-webdriver-4.13.0.0.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2024-06-02 14:38:59,999 ERROR o.a.j.s.SampleResult: sampleEnd called twice
+java.lang.Throwable: Invalid call sequence
+	at org.apache.jmeter.samplers.SampleResult.sampleEnd(SampleResult.java:1198) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.samplers.SampleResult$sampleEnd$0.call(Unknown Source) [ApacheJMeter_core.jar:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125) [groovy-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130) [groovy-3.0.20.jar:3.0.20]
+	at Script2.run(Script2.groovy:41) [script:?]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:317) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:155) [groovy-jsr223-3.0.20.jar:3.0.20]
+	at java.scripting/javax.script.AbstractScriptEngine.eval(AbstractScriptEngine.java:264) [java.scripting:?]
+	at com.googlecode.jmeter.plugins.webdriver.sampler.WebDriverSampler.sample(WebDriverSampler.java:101) [jmeter-plugins-webdriver-4.13.0.0.jar:?]
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.lang.Thread.run(Thread.java:832) [?:?]
+2024-06-02 14:39:00,012 INFO o.a.j.t.JMeterThread: Thread is done: Thread Group 1-1
+2024-06-02 14:39:00,012 INFO o.a.j.t.JMeterThread: Thread finished: Thread Group 1-1
+2024-06-02 14:39:00,615 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2024-06-02 14:39:00,615 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)

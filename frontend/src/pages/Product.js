@@ -16,9 +16,9 @@ const Products = (cart) => {
   const para = useRef(null);
   
   const categories = [
-    "smartphone",
-    "laptop",
-    "smartwatch",
+    'smartphone',
+    'laptop',
+    'smartwatch',
     "earbuds",
     "Keyboard",
     "graphics card",
@@ -80,7 +80,8 @@ const Products = (cart) => {
           {categories.map((cat, i) => (
             <p
               ref={para}
-              className="select-none cursor-pointer capitalize font-semibold"
+              className='select-none cursor-pomointer capitalize font-semibold'
+              id={cat}
               key={i}
               onClick={() => {
                 const filters = products.filter(
@@ -97,7 +98,7 @@ const Products = (cart) => {
         <div>
           <p className="text-gray-500 pb-4">
             {<Link to="/">Home </Link>}/
-            <span className="text-sky-400 px-1">{catPath}</span>
+            <span id='currentCategorie' className="text-sky-400 px-1">{catPath}</span>
           </p>
           <div className="grid grid-cols-3 gap-10 ">
             {filterProducts &&

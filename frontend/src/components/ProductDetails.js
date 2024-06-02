@@ -62,7 +62,7 @@ const ProductDetails = (cart) => {
           </h3>
           <button
             onClick={() => addToCart(product.id,product.img,product.brand)}
-            className="bg-sky-500 text-sky-50 px-2 py-1 mt-4"
+            className="bg-sky-500 text-sky-50 px-2 py-1 mt-4" id='add'
           >
             add to cart
           </button>

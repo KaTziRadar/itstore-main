@@ -52,7 +52,7 @@ const SingleProduct = ({ product,cart,cartSize,setCart,setCartSize}) => {
           state={product}
           className="hover:text-rose-50 text-gray-900 duration-300 flex justify-between items-center"
         >
-          <button className="text-sky-400 px-2 py-1 border border-sky-400 rounded-md hover:bg-sky-400 hover:text-sky-50 duration-300">
+          <button className='text-sky-400 px-2 py-1 border border-sky-400 rounded-md hover:bg-sky-400 hover:text-sky-50 duration-300'>
             More Info
           </button>
         </Link>
