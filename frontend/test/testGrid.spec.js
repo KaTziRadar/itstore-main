@@ -13,7 +13,7 @@ describe('00_Navbar', function() {
   afterEach(async function() {
     await driver.quit();
   })
-  it('00_Navbar', async function() {
+  it('00_NavbarGRID', async function() {
     await driver.get("http://localhost:3000/")
     vars["userID"] = await driver.executeScript("return localStorage.getItem(\"userID\")")
     if (!!await driver.executeScript("return (arguments[0] != null)", vars["userID"])) {
