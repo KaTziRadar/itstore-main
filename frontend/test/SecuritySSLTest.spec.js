@@ -29,7 +29,7 @@ describe('Security Testing with Selenium Grid SSLT', function () {
   it('Check for SSL/TLS configuration', async function () {
     await driver.get('https://itstore-main-fe-omj2.onrender.com/');
     let url = await driver.getCurrentUrl();
-    assert(url.startsWith('http://')); // Ensure the site is using HTTPS
+    assert(url.startsWith('https://')); // Ensure the site is using HTTPS
   });
 
   
